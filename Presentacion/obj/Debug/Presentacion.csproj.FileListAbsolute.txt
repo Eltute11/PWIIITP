@@ -1,0 +1,11 @@
+C:\Users\diego.trefiletti\Desktop\Maratones\Presentacion\bin\Presentacion.dll
+C:\Users\diego.trefiletti\Desktop\Maratones\Presentacion\bin\Presentacion.pdb
+C:\Users\diego.trefiletti\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\diego.trefiletti\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\diego.trefiletti\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Matias Windows\Desktop\Maratones\Presentacion\bin\Presentacion.dll.config
+C:\Users\Matias Windows\Desktop\Maratones\Presentacion\bin\Presentacion.dll
+C:\Users\Matias Windows\Desktop\Maratones\Presentacion\bin\Presentacion.pdb
+C:\Users\Matias Windows\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\Matias Windows\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\Matias Windows\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.pdb

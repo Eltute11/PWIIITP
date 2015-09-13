@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master/Global.Master" AutoEventWireup="true" CodeBehind="GrupoAdmin.master.cs" Inherits="Presentacion.Master.NestedMasterPage1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphGlobalHead" runat="server">
+
+
+    <asp:ContentPlaceHolder ID="cphAdminHead" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="cphGlobalBody" runat="server">
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Maratones UNLaM</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <!--li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Maratones<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <li><a href="../default/">Inscribirse</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../cerulean/">Historial</a></li>
+                        </ul>
+                    </li-->
+                    <li>
+                        <!--a href="../help/">Help</a-->
+                    </li>
+                    <li>
+                        <!--a href="http://news.bootswatch.com">Blog</a-->
+                    </li>
+                    <!--li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">
+                            <img src="../Img/Config.png" /><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="download">
+                            <li><a href="http://jsfiddle.net/bootswatch/gqhenoox/">Mis Datos</a></li>
+                            <li class="divider"></li>
+                            <li><a href="./bootstrap.min.css">Cerrar Sesi&oacute;n</a></li>
+                        </ul>
+                    </li-->
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Menu Maratones -->
+              <!-- <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A1">Maratones<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <li><a href="#new" data-toggle="tab">Nueva Maraton</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#reg" data-toggle="tab">Registrar Resultados</a></li>
+                        </ul>
+                    </li> -->
+
+                    <!-- Menu Sesion -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A2">
+                            <img src="../Img/Config.png" /><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="download">
+                            <li><a href="#">Cerrar Sesi&oacute;n</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contenido dinamico Body de Cada Page. -->
+    <asp:ContentPlaceHolder ID="cphAdminBody" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</asp:Content>

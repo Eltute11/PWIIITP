@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master/Global.Master" AutoEventWireup="true" CodeBehind="GrupoUsuario.master.cs" Inherits="Presentacion.Master.GrupoUsuario" %>
+
+<asp:Content ID="cUsuarioHead" ContentPlaceHolderID="cphGlobalHead" runat="server">
+
+    <!-- Contenido dinamico Head de Cada Page. -->
+    <asp:ContentPlaceHolder ID="cphUsuarioHead" runat="server">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="cUsuarioBody" ContentPlaceHolderID="cphGlobalBody" runat="server">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="../" class="navbar-brand">Maratones UNLaM</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <!--li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Maratones<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <li><a href="../default/">Inscribirse</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../cerulean/">Historial</a></li>
+                        </ul>
+                    </li-->
+                    <li>
+                        <!--a href="../help/">Help</a-->
+                    </li>
+                    <li>
+                        <!--a href="http://news.bootswatch.com">Blog</a-->
+                    </li>
+                    <!--li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">
+                            <img src="../Img/Config.png" /><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="download">
+                            <li><a href="http://jsfiddle.net/bootswatch/gqhenoox/">Mis Datos</a></li>
+                            <li class="divider"></li>
+                            <li><a href="./bootstrap.min.css">Cerrar Sesi&oacute;n</a></li>
+                        </ul>
+                    </li-->
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- Menu Maratones -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A1">Maratones<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="themes">
+                            <li><a href="#">Inscribirse</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../GrupoUsuario/UsuarioHistorialMaratones.aspx">Mis Maratones</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menu Sesion -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A2">
+                            <img src="../Img/Config.png" /><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="download">
+                            <li><a href="./UsuarioAdminDatos.aspx">Mis Datos</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Cerrar Sesi&oacute;n</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido dinamico Body de Cada Page. -->
+    <asp:ContentPlaceHolder ID="cphUsuarioBody" runat="server">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
