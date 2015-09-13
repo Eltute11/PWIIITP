@@ -69,6 +69,7 @@
     <Content Include="Js\bootstrap.min.js" />
     <Content Include="Js\custom.js" />
     <Content Include="Js\jquery-1.10.2.min.js" />
+    <Content Include="UserControl\ucFooter.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +123,13 @@
       <DependentUpon>GrupoAdmin.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\ucFooter.ascx.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucFooter.ascx.designer.cs">
+      <DependentUpon>ucFooter.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master\Global.Master" />

@@ -1,5 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Global.master.cs" Inherits="Presentacion.Global" %>
 
+<%@ Register Src="~/UserControl/ucFooter.ascx" TagPrefix="uc1" TagName="ucFooter" %>
+<%@ Register Src="~/UserControl/ucFooter.ascx" TagPrefix="uc2" TagName="ucFooter" %>
+<%@ Register Src="~/UserControl/ucFooter.ascx" TagPrefix="uc3" TagName="ucFooter" %>
+<%@ Register Src="~/UserControl/ucFooter.ascx" TagPrefix="uc4" TagName="ucFooter" %>
+ 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -43,5 +48,12 @@
     <asp:ContentPlaceHolder ID="cphGlobalBody" runat="server">
             
     </asp:ContentPlaceHolder>
+ 
+    <footer class="navbar navbar-default navbar-fixed-bottom">
+               <uc1:ucFooter runat="server" ID="ucFooter1" />
+               <uc2:ucFooter runat="server" ID="ucFooter2" />
+               <uc3:ucFooter runat="server" ID="ucFooter3" />
+               <uc4:ucFooter runat="server" ID="ucFooter4" />
+    </footer>
 </body>
 </html>

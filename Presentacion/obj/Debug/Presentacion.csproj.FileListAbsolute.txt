@@ -9,3 +9,9 @@ C:\Users\Matias Windows\Desktop\Maratones\Presentacion\bin\Presentacion.pdb
 C:\Users\Matias Windows\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\Users\Matias Windows\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.dll
 C:\Users\Matias Windows\Desktop\Maratones\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\bin\Presentacion.dll.config
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\bin\Presentacion.dll
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\bin\Presentacion.pdb
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.pdb
