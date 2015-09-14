@@ -33,31 +33,31 @@
                                         <td>Column content</td>
                                         <td>Column content</td>
                                         <td>Column content</td>
-                                        <td><buttom class="btn btn-primary">Registrarse</buttom></td> <!--VER -->
+                                        <td><buttom class="btn btn-warning">Anular Inscripcion</buttom></td> <!--VER -->
                                     </tr>
                                     <tr>
                                         <td>Column content</td>
                                         <td>Column content</td>
                                         <td>Column content</td>
-                                        <td><buttom class="btn btn-primary">Registrarse</buttom></td>
+                                        <td><buttom class="btn btn-warning">Anular Inscripcion</buttom></td>
                                     </tr>
                                     <tr>
                                         <td>Column content</td>
                                         <td>Column content</td>
                                         <td>Column content</td>
-                                        <td><buttom class="btn btn-primary">Registrarse</buttom></td>
+                                        <td><buttom class="btn btn-warning">Anular Inscripcion</buttom></td>
                                     </tr>
                                     <tr>
                                         <td>Column content</td>
                                         <td>Column content</td>
                                         <td>Column content</td>
-                                        <td><buttom class="btn btn-primary">Registrarse</buttom></td>
+                                        <td><buttom class="btn btn-warning">Anular Inscripcion</buttom></td>
                                     </tr>
                                     <tr>
                                         <td>Column content</td>
                                         <td>Column content</td>
                                         <td>Column content</td>
-                                        <td><buttom class="btn btn-primary">Registrarse</buttom></td> <!--VER -->
+                                        <td><buttom class="btn btn-warning">Anular Inscripcion</buttom></td> <!--VER -->
                                     </tr>
                                 </tbody>
                             </table>

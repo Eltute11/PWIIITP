@@ -15,3 +15,8 @@ C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\bin\Presenta
 C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.dll
 C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\diego.trefiletti\Documents\GitHub\PWIIITP\Presentacion\bin\Presentacion.dll
+C:\Users\diego.trefiletti\Documents\GitHub\PWIIITP\Presentacion\bin\Presentacion.pdb
+C:\Users\diego.trefiletti\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\diego.trefiletti\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\diego.trefiletti\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.pdb

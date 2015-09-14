@@ -9,10 +9,6 @@ namespace Presentacion
 {
     public partial class ucFooter : System.Web.UI.UserControl
     {
-        public string lblText
-        {
-            set { lbl.Text = value; }
-        }
 
     }
 }

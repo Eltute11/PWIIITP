@@ -18,7 +18,10 @@ namespace Presentacion
         {
             if (txtEmailExistente.Text == "usuario")
             {
-                Response.Redirect(@"GrupoUsuario\UsuarioHistorialMaratones.aspx");    
+                Response.Redirect(@"GrupoUsuario\UsuarioHistorialMaratones.aspx");
+            }
+            else {
+                Response.Redirect(@"GrupoAdministracion\Administrador.aspx");
             }
         }
     }
