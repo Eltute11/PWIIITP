@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphUsuarioBody" runat="server">
     <div class="container">
         <div class="row">
-            <div class="coll-xs-12">
+            <div class="coll-lg-12">
                 <h2>Modificar perfil</h2>
                 
                 <div class="well bs-component">
