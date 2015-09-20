@@ -52,7 +52,8 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A1">Maratones<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="themes">
-                            <li><a href="#">Inscribirse</a></li>
+                            <%--<li><a href="#">Inscribirse</a></li>--%>
+                            <li><a href="../GrupoUsuario/UsuarioInscripcionMaratones.aspx">Inscribirse</a></li>
                             <li class="divider"></li>
                             <li><a href="../GrupoUsuario/UsuarioHistorialMaratones.aspx">Mis Maratones</a></li>
                         </ul>

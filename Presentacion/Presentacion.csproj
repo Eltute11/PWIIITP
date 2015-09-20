@@ -64,6 +64,7 @@
     <Content Include="GrupoAdministracion\MaratonResultado.aspx" />
     <Content Include="GrupoUsuario\UsuarioHistorialMaratones.aspx" />
     <Content Include="GrupoUsuario\UsuarioAdminDatos.aspx" />
+    <Content Include="GrupoUsuario\UsuarioInscripcionMaratones.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Img\Config.png" />
     <Content Include="Img\Consejos.jpg" />
@@ -109,6 +110,13 @@
     </Compile>
     <Compile Include="GrupoUsuario\UsuarioAdminDatos.aspx.designer.cs">
       <DependentUpon>UsuarioAdminDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoUsuario\UsuarioInscripcionMaratones.aspx.cs">
+      <DependentUpon>UsuarioInscripcionMaratones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GrupoUsuario\UsuarioInscripcionMaratones.aspx.designer.cs">
+      <DependentUpon>UsuarioInscripcionMaratones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
