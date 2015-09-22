@@ -107,13 +107,15 @@
 
             <div class="col-lg-6" col-lg-offset-1>
                 <div class="well bs-component">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" runat="server">
                         <fieldset>
                             <legend>Soy nuevo</legend>
                             <div class="form-group">
-                                <label for="inputEmail" class="col-lg-2 control-label">Me llamo</label>
+                                <label for="inputNombre" class="col-lg-2 control-label">Me llamo</label>
                                 <div class="col-lg-4">
-                                    <input type="text" class="form-control" id="txtNombre" placeholder="Nombre">
+                                    <asp:TextBox ID="txtNombre" class="form-control" runat="server">Nombre</asp:TextBox>
+                                   <!-- <input type="text" class="form-control" id="txtNombre" placeholder="Nombre"-->
+                                    <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="*" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-6">
                                     <input type="text" class="form-control" id="txtApellido" placeholder="Apellido">
