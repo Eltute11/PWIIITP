@@ -30,3 +30,4 @@ C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\Presentacion.dll
 C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\Presentacion.pdb
 C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.dll
 C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
