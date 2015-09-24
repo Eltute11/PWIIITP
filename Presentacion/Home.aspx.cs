@@ -13,16 +13,5 @@ namespace Presentacion
         {
 
         }
-
-        protected void btnIngresar_Click(object sender, EventArgs e)
-        {
-            if (txtEmailExistente.Text == "usuario")
-            {
-                Response.Redirect(@"GrupoUsuario\UsuarioHistorialMaratones.aspx");
-            }
-            else {
-                Response.Redirect(@"GrupoAdministracion\Administrador.aspx");
-            }
-        }
     }
 }

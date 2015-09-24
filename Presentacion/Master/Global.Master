@@ -45,6 +45,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
+
+                <!-- Contenido dinamico del Body para cada Master por Perfil -->
                 <asp:ContentPlaceHolder ID="cphGlobalBody" runat="server">
             
                 </asp:ContentPlaceHolder>

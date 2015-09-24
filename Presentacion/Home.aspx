@@ -1,48 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="Presentacion.Home" MasterPageFile="~/Master/Global.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Master/Publico.master" CodeBehind="Home.aspx.cs" Inherits="Presentacion.Home" %>
 
-<asp:Content ID="ContentHead" ContentPlaceHolderID="cphGlobalHead" runat="server">
-    <title>Home - Login</title>
+<asp:Content ID="ContentHead" ContentPlaceHolderID="cphPublicoHead" runat="server">
+    <title>Home</title>
 </asp:Content>
 
-<asp:Content ID="ContentBody" ContentPlaceHolderID="cphGlobalBody" runat="server">
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a href="../" class="navbar-brand">Maratones UNLaM</a>
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-
-                <div class="collapse navbar-collapse" id="Div1">
-                    <ul class="nav navbar-nav">
-                    </ul>
-
-                    <form class="navbar-form navbar-right" role="search" runat="server" method="post" id="frmExistente">
-                        <div class="form-group">
-                            <label class="control-label">Ya estoy registrado</label>
-                            <asp:TextBox runat="server" ID="txtEmailExistente" class="form-control" placeholder="Email"></asp:TextBox>
-                            <asp:TextBox runat="server" ID="txtClaveExistente" TextMode="Password" class="form-control" placeholder="Clave"></asp:TextBox>
-                        </div>
-                        <asp:Button class="btn btn-default" runat="server" Text="Ingresar" ID="btnIngresar" OnClick="btnIngresar_Click" />
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </div>
+<asp:Content ID="ContentBody" ContentPlaceHolderID="cphPublicoBody" runat="server">
 
     <!--<div class="container">-->
         <div class="row">
@@ -165,4 +127,5 @@
         (function () { try { var s, a, i, j, r, c, l = document.getElementsByTagName("a"), t = document.createElement("textarea"); for (i = 0; l.length - i; i++) { try { a = l[i].getAttribute("href"); if (a && a.indexOf("/cdn-cgi/l/email-protection") > -1 && (a.length > 28)) { s = ''; j = 27 + 1 + a.indexOf("/cdn-cgi/l/email-protection"); if (a.length > j) { r = parseInt(a.substr(j, 2), 16); for (j += 2; a.length > j && a.substr(j, 1) != 'X'; j += 2) { c = parseInt(a.substr(j, 2), 16) ^ r; s += String.fromCharCode(c); } j += 1; s += a.substr(j, a.length - j); } t.innerHTML = s.replace(/</g, "&lt;").replace(/>/g, "&gt;"); l[i].setAttribute("href", "mailto:" + t.value); } } catch (e) { } } } catch (e) { } })();
         /* ]]> */
     </script>
+
 </asp:Content>
