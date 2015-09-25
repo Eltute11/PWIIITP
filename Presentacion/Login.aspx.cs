@@ -18,11 +18,11 @@ namespace Presentacion
         {
             if (chkSoyAdministrador.Checked)
             {
-                Response.Redirect(@"\GrupoAdministracion\Administrador.aspx/", false);
+                Response.Redirect(@"\GrupoAdministracion\Administrador.aspx", false);
             }
             else 
             {
-                Response.Redirect(@"\GrupoUsuario\UsuarioHistorialMaratones.aspx/", false);
+                Response.Redirect(@"\GrupoUsuario\MisMaratones.aspx", false);
             }
         }
     }

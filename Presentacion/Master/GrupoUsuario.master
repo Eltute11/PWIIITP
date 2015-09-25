@@ -55,7 +55,7 @@
                             <%--<li><a href="#">Inscribirse</a></li>--%>
                             <li><a href="../GrupoUsuario/UsuarioInscripcionMaratones.aspx">Inscribirse</a></li>
                             <li class="divider"></li>
-                            <li><a href="../GrupoUsuario/UsuarioHistorialMaratones.aspx">Mis Maratones</a></li>
+                            <li><a href="../GrupoUsuario/MisMaratones.aspx">Mis Maratones</a></li>
                         </ul>
                     </li>
 

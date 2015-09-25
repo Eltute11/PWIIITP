@@ -57,11 +57,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Consejos.aspx" />
     <Content Include="Css\bootstrap.css" />
     <Content Include="Css\custom.min.css" />
     <Content Include="GrupoAdministracion\Administrador.aspx" />
     <Content Include="GrupoAdministracion\MaratonDetalle.aspx" />
     <Content Include="GrupoAdministracion\MaratonResultado.aspx" />
+    <Content Include="GrupoUsuario\MisMaratones.aspx" />
     <Content Include="GrupoUsuario\UsuarioHistorialMaratones.aspx" />
     <Content Include="GrupoUsuario\UsuarioAdminDatos.aspx" />
     <Content Include="GrupoUsuario\UsuarioInscripcionMaratones.aspx" />
@@ -77,6 +79,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consejos.aspx.cs">
+      <DependentUpon>Consejos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consejos.aspx.designer.cs">
+      <DependentUpon>Consejos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GrupoAdministracion\Administrador.aspx.cs">
       <DependentUpon>Administrador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -97,6 +106,13 @@
     </Compile>
     <Compile Include="GrupoAdministracion\MaratonResultado.aspx.designer.cs">
       <DependentUpon>MaratonResultado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GrupoUsuario\MisMaratones.aspx.cs">
+      <DependentUpon>MisMaratones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GrupoUsuario\MisMaratones.aspx.designer.cs">
+      <DependentUpon>MisMaratones.aspx</DependentUpon>
     </Compile>
     <Compile Include="GrupoUsuario\UsuarioHistorialMaratones.aspx.cs">
       <DependentUpon>UsuarioHistorialMaratones.aspx</DependentUpon>
