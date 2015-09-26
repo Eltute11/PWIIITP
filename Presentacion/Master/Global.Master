@@ -10,6 +10,7 @@
     <!-- Css Globales -->
     <link href="../Css/bootstrap.css" type="text/css" rel="stylesheet" />
     <link href="../Css/custom.min.css" type="text/css" rel="stylesheet" />
+    <link href="../Css/style.css" type="text/css" rel="stylesheet" />
 
     <!-- Js Globales -->
     <script src="../Js/jquery-1.10.2.min.js"></script>

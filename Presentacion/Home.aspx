@@ -17,7 +17,7 @@
 
             <!-- Ultima Maraton (Resultados) -->
 
-            <div class="col-lg-6" col-lg-offset-1>
+            <div class="col-lg-6" > <!-- col-lg-offset-1 -->
                 <div class="bs-component">
                     <ul class="list-group">
                         <li class="list-group-item">
@@ -67,7 +67,7 @@
 
             <!-- Registrate -->
 
-            <div class="col-lg-6" col-lg-offset-1>
+            <div class="col-lg-6" > <!-- col-lg-offset-1 -->
                 <div class="well bs-component">
                     <form class="form-horizontal" runat="server">
                         <fieldset>

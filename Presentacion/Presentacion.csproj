@@ -60,6 +60,7 @@
     <Content Include="Consejos.aspx" />
     <Content Include="Css\bootstrap.css" />
     <Content Include="Css\custom.min.css" />
+    <Content Include="Css\style.css" />
     <Content Include="GrupoAdministracion\Administrador.aspx" />
     <Content Include="GrupoAdministracion\MaratonDetalle.aspx" />
     <Content Include="GrupoAdministracion\MaratonResultado.aspx" />

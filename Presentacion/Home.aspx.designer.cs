@@ -8,10 +8,10 @@
 //------------------------------------------------------------------------------
 
 namespace Presentacion {
-    
-    
+
+
     public partial class Home {
-        
+
         /// <summary>
         /// txtNombre control.
         /// </summary>
@@ -20,7 +20,7 @@ namespace Presentacion {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
-        
+
         /// <summary>
         /// rfvNombre control.
         /// </summary>
