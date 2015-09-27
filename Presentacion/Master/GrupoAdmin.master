@@ -53,9 +53,9 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="A1">Maratones<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="themes">
-                            <li><a href="../GrupoAdministracion/MaratonDetalle.aspx" data-toggle="tab">Nueva</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#reg" data-toggle="tab">Registrar Resultados</a></li>
+                            <li><a href="../GrupoAdministracion/MaratonDetalle.aspx">Nueva</a></li>
+                            <!--<li class="divider"></li>
+                            <li><a href="../GrupoAdministracion/MaratonResultado.aspx">Registrar Resultados</a></li>-->
                         </ul>
                     </li> 
 

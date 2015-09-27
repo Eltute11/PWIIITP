@@ -18,7 +18,7 @@ namespace Presentacion
         {
             if (chkSoyAdministrador.Checked)
             {
-                Response.Redirect(@"\GrupoAdministracion\Administrador.aspx", false);
+                Response.Redirect(@"\GrupoAdministracion\MisMaratones.aspx", false);
             }
             else 
             {
