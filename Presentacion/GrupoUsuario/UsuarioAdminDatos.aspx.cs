@@ -13,5 +13,10 @@ namespace Presentacion.GrupoUsuario
         {
 
         }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

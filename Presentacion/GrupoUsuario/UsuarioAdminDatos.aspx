@@ -9,33 +9,34 @@
         <div class="col-lg-12">
             <h2>Modificar perfil</h2>
             <div class="well bs-component">
-                <form class="form-horizontal">
+                <form class="form-horizontal" runat="server">
                     <fieldset>
                         <legend>Mis Datos</legend>
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Me llamo</label>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control" id="txtNombre" placeholder="Nombre">
+                               <asp:TextBox ID="txtNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
+                               <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                             </div>
                             <div class="col-lg-6">
-                                <input type="text" class="form-control" id="txtApellido" placeholder="Apellido">
-                            </div>
+                                <asp:TextBox ID="txtApellido" class="form-control" placeholder="Apellido" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtApellido"></asp:RequiredFieldValidator>                            </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Naci el</label>
                             <div class="col-lg-6">
-                                <input type="text" class="form-control" id="txtFechaNacimiento" placeholder="Fecha Nacimiento">
-                            </div>
+                                <asp:TextBox class="form-control" ID="txtFechaNacimiento" placeholder="Fecha Nacimiento" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvNacimiento" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaNacimiento"></asp:RequiredFieldValidator>                            </div>
                         </div>
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Vivo en</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" id="Text1" placeholder="Residencia">
-                            </div>
+                                <asp:TextBox ID="txtResidencia" class="form-control" placeholder="Residencia" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvResidencia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtResidencia"></asp:RequiredFieldValidator>                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary">Modificar</button>
+                                <asp:Button ID="btnModificar" class="btn btn-primary" runat="server" Text="Modificar" OnClick="btnModificar_Click" />
                             </div>
                         </div>
                     </fieldset>
