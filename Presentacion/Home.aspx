@@ -75,43 +75,44 @@
                             <div class="form-group">
                                 <label for="inputNombre" class="col-lg-2 control-label">Me llamo</label>
                                 <div class="col-lg-4">
-                                    <asp:TextBox ID="txtNombre" class="form-control" runat="server">Nombre</asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="*" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                                    <asp:TextBox ID="txtNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                                 </div>
                                 <div class="col-lg-6">
-                                    <asp:TextBox ID="txtApellido" class="form-control" runat="server">Apellido</asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ErrorMessage="*" ControlToValidate="txtApellido"></asp:RequiredFieldValidator>
+                                    <asp:TextBox ID="txtApellido" class="form-control" placeholder="Apellido" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtApellido"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Mi Mail es</label>
                                 <div class="col-lg-10">
-                                    <asp:TextBox ID="TextBox2" class="form-control" runat="server">Email</asp:TextBox>
-                                    <asp:CustomValidator ID="cvEmail" runat="server" ErrorMessage="*"></asp:CustomValidator>
+                                    <asp:TextBox ID="TextBox2" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
+                                    <asp:CustomValidator ID="cvEmail" runat="server" ErrorMessage="Campo obligatorio"></asp:CustomValidator>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Naci el</label>
                                 <div class="col-lg-6">
-                                    <asp:TextBox class="form-control" ID="txtFechaNacimiento" runat="server">Fecha Nacimiento</asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvNacimiento" runat="server" ErrorMessage="*" ControlToValidate="txtFechaNacimiento"></asp:RequiredFieldValidator>
+                                    <asp:TextBox class="form-control" ID="txtFechaNacimiento" placeholder="Fecha Nacimiento" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvNacimiento" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaNacimiento"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Vivo en</label>
                                 <div class="col-lg-10">
-                                    <asp:TextBox ID="txtResidencia" class="form-control" runat="server">Residencia</asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvResidencia" runat="server" ErrorMessage="*" ControlToValidate="txtResidencia"></asp:RequiredFieldValidator>
+                                    <asp:TextBox ID="txtResidencia" class="form-control" placeholder="Residencia" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvResidencia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtResidencia"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword" class="col-lg-2 control-label">Mi clave</label>
                                 <div class="col-lg-5">
-                                    <asp:TextBox ID="txtClave" class="form-control" runat="server">Clave</asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvClave1" runat="server" ErrorMessage="*" ControlToValidate="txtClave"></asp:RequiredFieldValidator>                           
+                                    <asp:TextBox ID="txtClave" class="form-control" placeholder="Clave" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvClave1" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtClave"></asp:RequiredFieldValidator>                           
                                 </div>
                                 <div class="col-lg-5">
-                                    <asp:TextBox ID="txtClaveRepetir" class="form-control" runat="server">Repetir Clave</asp:TextBox>
+                                    <asp:TextBox ID="txtClaveRepetir" class="form-control" placeholder="Repetir Clave" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvClave2" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtClaveRepetir"></asp:RequiredFieldValidator>
                                     <asp:CompareValidator ID="cvClave2" runat="server" ErrorMessage="Contraseña no coincide" ControlToValidate="txtClave" ControlToCompare="txtClaveRepetir"></asp:CompareValidator>
                                 </div>
                             </div>

@@ -29,14 +29,14 @@
                             <label for="inputEmail" class="col-lg-2 control-label">Mi Mail es</label>
                             <div class="col-lg-10">
                                 <asp:TextBox ID="txtMail" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvMail" runat="server" ErrorMessage="*" ControlToValidate="txtMail"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvMail" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtMail"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword" class="col-lg-2 control-label">Mi clave</label>
                             <div class="col-lg-5">
                                 <asp:TextBox ID="txtClave" class="form-control" type="password" placeholder="Clave" runat="server"></asp:TextBox>
-                               <asp:RequiredFieldValidator ID="rfvPass" runat="server" ErrorMessage="*" ControlToValidate="txtClave"></asp:RequiredFieldValidator>
+                               <asp:RequiredFieldValidator ID="rfvPass" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtClave"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">
