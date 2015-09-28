@@ -13,5 +13,10 @@ namespace Presentacion.GrupoAdministracion
         {
 
         }
+
+        protected void btnCrear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

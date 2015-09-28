@@ -1,0 +1,15 @@
+.hrefBlanco
+{
+	color:#FFFFFF;
+}
+
+a.nounderline:link   
+{   
+    text-decoration:none;   
+} 
+
+a.hover:hover
+{
+    color: #000000;       
+}
+  

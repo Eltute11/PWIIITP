@@ -20,7 +20,7 @@
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="proxima">
                         <h4>Maratones a correr</h4>
-                        <p>No estas inscripto en ninguna Marat&oacute;n. ¿No te animas al menos a los 3K? <a href="#">¡Anotate!</a></p>
+                        <p>No est&aacute;s inscripto en ninguna Marat&oacute;n. ¿Que esper&aacute;s? <a href="UsuarioInscripcionMaratones.aspx">¡Anotate!</a></p>
                         <table class="table table-striped table-hover ">
                             <thead>
                                 <tr>

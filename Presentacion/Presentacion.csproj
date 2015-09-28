@@ -61,12 +61,10 @@
     <Content Include="Css\bootstrap.css" />
     <Content Include="Css\custom.min.css" />
     <Content Include="Css\style.css" />
-    <Content Include="GrupoAdministracion\Administrador.aspx" />
     <Content Include="GrupoAdministracion\MaratonDetalle.aspx" />
     <Content Include="GrupoAdministracion\MaratonResultado.aspx" />
     <Content Include="GrupoAdministracion\MisMaratones.aspx" />
     <Content Include="GrupoUsuario\MisMaratones.aspx" />
-    <Content Include="GrupoUsuario\UsuarioHistorialMaratones.aspx" />
     <Content Include="GrupoUsuario\UsuarioAdminDatos.aspx" />
     <Content Include="GrupoUsuario\UsuarioInscripcionMaratones.aspx" />
     <Content Include="Home.aspx" />
@@ -74,6 +72,7 @@
     <Content Include="Img\Consejos.jpg" />
     <Content Include="Img\marathon_oil_logo.gif" />
     <Content Include="Js\bootstrap.min.js" />
+    <Content Include="Js\Bootswatch\lumen.js" />
     <Content Include="Js\custom.js" />
     <Content Include="Js\jquery-1.10.2.min.js" />
     <Content Include="Login.aspx" />
@@ -87,13 +86,6 @@
     </Compile>
     <Compile Include="Consejos.aspx.designer.cs">
       <DependentUpon>Consejos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GrupoAdministracion\Administrador.aspx.cs">
-      <DependentUpon>Administrador.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GrupoAdministracion\Administrador.aspx.designer.cs">
-      <DependentUpon>Administrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="GrupoAdministracion\MaratonDetalle.aspx.cs">
       <DependentUpon>MaratonDetalle.aspx</DependentUpon>
@@ -122,13 +114,6 @@
     </Compile>
     <Compile Include="GrupoUsuario\MisMaratones.aspx.designer.cs">
       <DependentUpon>MisMaratones.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GrupoUsuario\UsuarioHistorialMaratones.aspx.cs">
-      <DependentUpon>UsuarioHistorialMaratones.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GrupoUsuario\UsuarioHistorialMaratones.aspx.designer.cs">
-      <DependentUpon>UsuarioHistorialMaratones.aspx</DependentUpon>
     </Compile>
     <Compile Include="GrupoUsuario\UsuarioAdminDatos.aspx.cs">
       <DependentUpon>UsuarioAdminDatos.aspx</DependentUpon>

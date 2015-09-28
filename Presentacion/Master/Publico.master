@@ -1,10 +1,9 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Master/Global.Master" AutoEventWireup="true" CodeBehind="Publico.master.cs" Inherits="Presentacion.Master.Publico" %>
 
 <asp:Content ID="ContentHead" ContentPlaceHolderID="cphGlobalHead" runat="server">
-    
+
     <!-- Contenido dinamico Head de Cada Page. -->
     <asp:ContentPlaceHolder ID="cphPublicoHead" runat="server">
-
     </asp:ContentPlaceHolder>
 
 </asp:Content>
@@ -13,38 +12,27 @@
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <a href="/Home.aspx" class="navbar-brand">Maratones UNLaM</a>
+                <a href="../Home.aspx" class="navbar-brand">Maratones UNLaM</a>
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
             </div>
-
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <!-- Menu Publico -->
                 <ul class="nav navbar-nav navbar-right">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/Consejos.aspx">Consejos</a></li>
-                        <li><a href="/Login.aspx">Iniciar Sesi&oacute;n</a></li>
-                    </ul>
+                    <li><a href="/Consejos.aspx">Consejos</a></li>
+                    <li><a href="/Login.aspx">Iniciar Sesi&oacute;n</a></li>
                 </ul>
-                
+
             </div>
         </div>
     </div>
-    
+
+
     <!-- Contenido dinamico Body de Cada Page. -->
     <asp:ContentPlaceHolder ID="cphPublicoBody" runat="server">
-
     </asp:ContentPlaceHolder>
 
 </asp:Content>
