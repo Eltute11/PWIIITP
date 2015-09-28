@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/GrupoUsuario.master" AutoEventWireup="true" CodeBehind="UsuarioAdminDatos.aspx.cs" Inherits="Presentacion.GrupoUsuario.UsuarioMisDatos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/GrupoUsuario.master" AutoEventWireup="true" CodeBehind="UsuarioAdminDatos.aspx.cs" Inherits="Presentacion.GrupoUsuario.UsuarioAdminDatos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphUsuarioHead" runat="server">
     <title>Mis Datos</title>

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Presentacion.GrupoUsuario
 {
-    public partial class UsuarioMisDatos : System.Web.UI.Page
+    public partial class UsuarioAdminDatos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
