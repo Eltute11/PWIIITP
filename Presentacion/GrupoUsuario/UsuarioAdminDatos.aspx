@@ -15,24 +15,29 @@
                         <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Me llamo</label>
                             <div class="col-lg-4">
-                               <asp:TextBox ID="txtNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
-                               <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                                <asp:TextBox ID="txtNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtNombre" Display="Dynamic"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="revNombre" runat="server" ErrorMessage="Solo letras" ValidationExpression="^[A-Za-z]*$" ControlToValidate="txtNombre" Display="Dynamic"></asp:RegularExpressionValidator>
                             </div>
                             <div class="col-lg-6">
                                 <asp:TextBox ID="txtApellido" class="form-control" placeholder="Apellido" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtApellido"></asp:RequiredFieldValidator>                            </div>
+                                <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtApellido"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="revApellido" runat="server" ErrorMessage="Solo letras" ValidationExpression="^[A-Za-z]*$" ControlToValidate="txtApellido" Display="Dynamic"></asp:RegularExpressionValidator>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail" class="col-lg-2 control-label">Naci el</label>
+                            <label for="txtFechaNacimiento" class="col-lg-2 control-label">Naci el</label>
                             <div class="col-lg-6">
                                 <asp:TextBox class="form-control" ID="txtFechaNacimiento" placeholder="Fecha Nacimiento" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvNacimiento" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaNacimiento"></asp:RequiredFieldValidator>                            </div>
+                                <asp:RequiredFieldValidator ID="rfvNacimiento" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaNacimiento"></asp:RequiredFieldValidator>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail" class="col-lg-2 control-label">Vivo en</label>
+                            <label for="txtResidencia" class="col-lg-2 control-label">Vivo en</label>
                             <div class="col-lg-10">
                                 <asp:TextBox ID="txtResidencia" class="form-control" placeholder="Residencia" runat="server"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="rfvResidencia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtResidencia"></asp:RequiredFieldValidator>                            </div>
+                                <asp:RequiredFieldValidator ID="rfvResidencia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtResidencia"></asp:RequiredFieldValidator>
+                            </div>
                         </div>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">

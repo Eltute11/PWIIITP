@@ -11,7 +11,14 @@ namespace Presentacion.GrupoAdministracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
+
+         protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+        
+        }
+
+        
     }
 }

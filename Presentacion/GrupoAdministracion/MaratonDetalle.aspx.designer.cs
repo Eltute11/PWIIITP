@@ -31,6 +31,15 @@ namespace Presentacion.GrupoAdministracion {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombre;
         
         /// <summary>
+        /// Control revNombre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revNombre;
+        
+        /// <summary>
         /// Control txtCant.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace Presentacion.GrupoAdministracion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCant;
+        
+        /// <summary>
+        /// Control revCantidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCantidad;
         
         /// <summary>
         /// Control txtSalida.
@@ -67,6 +85,15 @@ namespace Presentacion.GrupoAdministracion {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSalida;
         
         /// <summary>
+        /// Control revSalida.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalida;
+        
+        /// <summary>
         /// Control txtEspera.
         /// </summary>
         /// <remarks>
@@ -85,6 +112,15 @@ namespace Presentacion.GrupoAdministracion {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEspera;
         
         /// <summary>
+        /// Control revEspera.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEspera;
+        
+        /// <summary>
         /// Control txtPremio.
         /// </summary>
         /// <remarks>
@@ -101,6 +137,15 @@ namespace Presentacion.GrupoAdministracion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPremio;
+        
+        /// <summary>
+        /// Control revPremio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPremio;
         
         /// <summary>
         /// Control rvPremio.
