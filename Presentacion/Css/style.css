@@ -12,4 +12,9 @@ a.hover:hover
 {
     color: #000000;       
 }
-  
+ 
+
+.margenGuardar
+{
+    margin = 0px 0px 20px;
+} 
