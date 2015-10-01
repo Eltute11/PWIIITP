@@ -88,8 +88,8 @@
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Mi Mail es</label>
                                 <div class="col-lg-10">
-                                    <asp:TextBox ID="TextBox2" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
-                                    <asp:CustomValidator ID="cvEmail" runat="server" ErrorMessage="Campo obligatorio"></asp:CustomValidator>
+                                    <asp:TextBox ID="txtMail" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
+                                    <asp:CustomValidator ID="cvEmail" runat="server" ErrorMessage="Email no valido" ControlToValidate="txtMail" OnServerValidate="FormatoEmail"></asp:CustomValidator>
                                 </div>
                             </div>
                             <div class="form-group">
