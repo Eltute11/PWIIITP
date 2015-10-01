@@ -16,5 +16,27 @@ a.hover:hover
 
 .margenGuardar
 {
-    margin = 0px 0px 20px;
-} 
+    margin : 0px 0px 20px;
+}
+
+.auto-style1 {
+            width: 357px;
+        }
+
+        .auto-style2 {
+            width: 129px;
+        }
+
+        .auto-style3 {
+            width: 357px;
+            height: 47px;
+        }
+
+        .auto-style4 {
+            width: 129px;
+            height: 47px;
+        }
+
+        .auto-style5 {
+            height: 47px;
+        }
