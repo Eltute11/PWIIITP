@@ -88,8 +88,9 @@
                             <div class="form-group">
                                 <label for="inputEmail" class="col-lg-2 control-label">Mi Mail es</label>
                                 <div class="col-lg-10">
-                                    <asp:TextBox ID="TextBox2" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
-                                    <asp:CustomValidator ID="cvEmail" runat="server" ErrorMessage="Campo obligatorio"></asp:CustomValidator>
+                                    <asp:TextBox ID="txtEmail" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtEmail" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Mail invalido"  ControlToValidate="txtEmail"  ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
                                 </div>
                             </div>
                             <div class="form-group">
