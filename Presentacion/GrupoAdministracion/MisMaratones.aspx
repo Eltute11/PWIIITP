@@ -104,7 +104,7 @@
                                     <td>Column content</td>
                                     <td>Column content</td>
                                     <td>Column content</td>
-                                    <td><buttom class="btn btn-warning"><a class="nounderline hover hrefBlanco" href="MaratonResultado.aspx">Resultados</a></buttom></td>
+                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
                                 </tr>
                                 <tr>
                                     <td>Column content</td>
@@ -113,7 +113,7 @@
                                     <td>Column content</td>
                                     <td>Column content</td>
                                     <td>Column content</td>
-                                    <td><buttom class="btn btn-warning"><a class="nounderline hover hrefBlanco" href="MaratonResultado.aspx">Resultados</a></buttom></td>
+                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
                                 </tr>
                                 <tr>
                                     <td>Column content</td>
@@ -122,7 +122,7 @@
                                     <td>Column content</td>
                                     <td>Column content</td>
                                     <td>Column content</td>
-                                    <td><buttom class="btn btn-warning"><a class="nounderline hover hrefBlanco" href="MaratonResultado.aspx">Resultados</a></buttom></td>
+                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
                                 </tr>
                                 <tr>
                                     <td>Column content</td>
@@ -131,7 +131,7 @@
                                     <td>Column content</td>
                                     <td>Column content</td>
                                     <td>Column content</td>
-                                    <td><buttom class="btn btn-warning"><a class="nounderline hover hrefBlanco" href="MaratonResultado.aspx">Resultados</a></buttom></td>
+                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
                                 </tr>
                                 <tr>
                                     <td>Column content</td>
@@ -140,7 +140,7 @@
                                     <td>Column content</td>
                                     <td>Column content</td>
                                     <td>Column content</td>
-                                    <td><buttom class="btn btn-warning"><a class="nounderline hover hrefBlanco" href="MaratonResultado.aspx">Resultados</a></buttom></td>
+                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
                                 </tr>
                             </tbody>
                         </table>
