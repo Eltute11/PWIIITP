@@ -43,3 +43,12 @@ C:\Users\jurco_000\Desktop\PWIIITP\Presentacion\bin\Presentacion.pdb
 C:\Users\jurco_000\Desktop\PWIIITP\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\Users\jurco_000\Desktop\PWIIITP\Presentacion\obj\Debug\Presentacion.dll
 C:\Users\jurco_000\Desktop\PWIIITP\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\Entidades.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\Negocio.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\BaseDeDatos.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\EntityFramework.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\Entidades.pdb
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\Negocio.pdb
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\BaseDeDatos.pdb
+C:\Users\Diego\Documents\GitHub\PWIIITP\Presentacion\bin\EntityFramework.xml

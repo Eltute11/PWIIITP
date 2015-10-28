@@ -49,6 +49,8 @@
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
                                 <asp:Button ID="btnIngresar" class="btn btn-primary" runat="server" Text="¡Ingresar!" OnClick="btnIngresar_Click" />
+
+                                <asp:Label ID="lblMensaje" runat="server" Text="¡Usuario o Perfil Inválidos!" Visible="False" class="text-danger"></asp:Label>
                             </div>
                         </div>
                     </fieldset>
@@ -63,4 +65,5 @@
         </div>
     </div>
 
+                        </div>
 </asp:Content>

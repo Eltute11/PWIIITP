@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MaratonModelStoreContainer" CdmEntityContainer="MaratonEntities">
+    <EntitySetMapping Name="Maraton">
+      <EntityTypeMapping TypeName="MaratonModel.Maraton">
+        <MappingFragment StoreEntitySet="Maraton">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Cant_Participantes" ColumnName="Cant_Participantes" />
+          <ScalarProperty Name="Lugar_Salida" ColumnName="Lugar_Salida" />
+          <ScalarProperty Name="Cant_Lista_Espera" ColumnName="Cant_Lista_Espera" />
+          <ScalarProperty Name="Premio_Uno" ColumnName="Premio_Uno" />
+          <ScalarProperty Name="Premio_Dos" ColumnName="Premio_Dos" />
+          <ScalarProperty Name="Premio_Tres" ColumnName="Premio_Tres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maraton_Usuario">
+      <EntityTypeMapping TypeName="MaratonModel.Maraton_Usuario">
+        <MappingFragment StoreEntitySet="Maraton_Usuario">
+          <ScalarProperty Name="MaratonID" ColumnName="MaratonID" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="Lista_Espera" ColumnName="Lista_Espera" />
+          <ScalarProperty Name="Tiempo_Llegada" ColumnName="Tiempo_Llegada" />
+          <ScalarProperty Name="Presente" ColumnName="Presente" />
+          <ScalarProperty Name="Abandono" ColumnName="Abandono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="MaratonModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Residencia" ColumnName="Residencia" />
+          <ScalarProperty Name="Administrador" ColumnName="Administrador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

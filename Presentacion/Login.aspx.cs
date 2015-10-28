@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entidades;
+using Negocio;
 
 namespace Presentacion
 {
@@ -16,13 +18,25 @@ namespace Presentacion
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            if (chkSoyAdministrador.Checked)
+            oUsuario oUsuario = new oUsuario();
+            oUsuario.email = txtEmail.Text;
+            oUsuario.clave = txtClave.Text;
+            oUsuario.administrador = chkSoyAdministrador.Checked;
+
+            if (UsuarioNegocio.Login(oUsuario))
             {
-                Response.Redirect(@"\GrupoAdministracion\MisMaratones.aspx", false);
+                if (oUsuario.administrador)
+                {
+                    Response.Redirect(@"\GrupoAdministracion\MisMaratones.aspx", false);
+                }
+                else
+                {
+                    Response.Redirect(@"\GrupoUsuario\MisMaratones.aspx", false);
+                }
             }
             else 
             {
-                Response.Redirect(@"\GrupoUsuario\MisMaratones.aspx", false);
+                lblMensaje.Visible = true;   
             }
         }
     }

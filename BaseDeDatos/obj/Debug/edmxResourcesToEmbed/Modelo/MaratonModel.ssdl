@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MaratonModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MaratonModelStoreContainer">
+    <EntitySet Name="Maraton" EntityType="MaratonModel.Store.Maraton" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Maraton_Usuario" EntityType="MaratonModel.Store.Maraton_Usuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuario" EntityType="MaratonModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Maraton_Usuario_Maraton" Association="MaratonModel.Store.FK_Maraton_Usuario_Maraton">
+      <End Role="Maraton" EntitySet="Maraton" />
+      <End Role="Maraton_Usuario" EntitySet="Maraton_Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Maraton_Usuario_Usuario" Association="MaratonModel.Store.FK_Maraton_Usuario_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Maraton_Usuario" EntitySet="Maraton_Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Maraton">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="Cant_Participantes" Type="int" Nullable="false" />
+    <Property Name="Lugar_Salida" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Cant_Lista_Espera" Type="int" Nullable="false" />
+    <Property Name="Premio_Uno" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Premio_Dos" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Premio_Tres" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="Maraton_Usuario">
+    <Key>
+      <PropertyRef Name="MaratonID" />
+      <PropertyRef Name="UsuarioID" />
+    </Key>
+    <Property Name="MaratonID" Type="int" Nullable="false" />
+    <Property Name="UsuarioID" Type="int" Nullable="false" />
+    <Property Name="Lista_Espera" Type="bit" Nullable="false" />
+    <Property Name="Tiempo_Llegada" Type="datetime" />
+    <Property Name="Presente" Type="bit" Nullable="false" />
+    <Property Name="Abandono" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Apellido" Type="varchar" Nullable="false" MaxLength="35" />
+    <Property Name="Clave" Type="varchar" Nullable="false" MaxLength="12" />
+    <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Fecha_Nacimiento" Type="datetime" />
+    <Property Name="Residencia" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Administrador" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Maraton_Usuario_Maraton">
+    <End Role="Maraton" Type="MaratonModel.Store.Maraton" Multiplicity="1" />
+    <End Role="Maraton_Usuario" Type="MaratonModel.Store.Maraton_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Maraton">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Maraton_Usuario">
+        <PropertyRef Name="MaratonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Maraton_Usuario_Usuario">
+    <End Role="Usuario" Type="MaratonModel.Store.Usuario" Multiplicity="1" />
+    <End Role="Maraton_Usuario" Type="MaratonModel.Store.Maraton_Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Maraton_Usuario">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

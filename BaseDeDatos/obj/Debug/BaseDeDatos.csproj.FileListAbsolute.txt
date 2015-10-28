@@ -1,0 +1,10 @@
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.dll.config
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.xml
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\Entidades.dll
+C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\Entidades.pdb

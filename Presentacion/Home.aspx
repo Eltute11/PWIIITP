@@ -123,7 +123,7 @@
                             <div class="form-group">
                                 <div class="col-lg-10 col-lg-offset-2">
                                     <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="¡Comenzar!" OnClick="btnRegistrar_Click" />
-                                    
+                                    <asp:Label ID="lblMensaje" runat="server" Text="Usuario creado."></asp:Label>
                                 </div>
                             </div>
                         </fieldset>

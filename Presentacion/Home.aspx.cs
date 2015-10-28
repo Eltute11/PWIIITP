@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entidades;
+using Negocio;
 
 namespace Presentacion
 {
@@ -16,7 +18,17 @@ namespace Presentacion
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+            oUsuario oUsuario = new oUsuario();
+            oUsuario.nombre = txtNombre.Text;
+            oUsuario.apellido = txtApellido.Text;
+            oUsuario.clave = txtClave.Text;
+            oUsuario.residencia = txtResidencia.Text;
+            oUsuario.fechaNacimiento = Convert.ToDateTime(txtFechaNacimiento.Text);
+            oUsuario.administrador = false;
+            oUsuario.email = txtEmail.Text;
 
+            UsuarioNegocio.Registrar(oUsuario);
+                
         }
 
     }
