@@ -15,7 +15,6 @@
         <!-- Iniciar sesion -->
         <div class="col-lg-2">
             <div class="bs-component">
-                
             </div>
 
         </div>
@@ -30,14 +29,14 @@
                             <div class="col-lg-10">
                                 <asp:TextBox ID="txtEmail" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtEmail" Display="Dynamic"></asp:RequiredFieldValidator>
-                                <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Mail invalido"  ControlToValidate="txtEmail"  ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Mail invalido" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputPassword" class="col-lg-2 control-label">Mi clave</label>
                             <div class="col-lg-5">
                                 <asp:TextBox ID="txtClave" class="form-control" type="password" placeholder="Clave" runat="server"></asp:TextBox>
-                               <asp:RequiredFieldValidator ID="rfvPass" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtClave"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="rfvPass" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtClave"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">
@@ -49,8 +48,7 @@
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
                                 <asp:Button ID="btnIngresar" class="btn btn-primary" runat="server" Text="¡Ingresar!" OnClick="btnIngresar_Click" />
-
-                                <asp:Label ID="lblMensaje" runat="server" Text="¡Usuario o Perfil Inválidos!" Visible="False" class="text-danger"></asp:Label>
+                                <asp:Label ID="lblMensaje" runat="server" Text="" class="text-danger"></asp:Label>
                             </div>
                         </div>
                     </fieldset>
@@ -60,10 +58,7 @@
 
         <div class="col-lg-2">
             <div class="bs-component">
-                
             </div>
         </div>
     </div>
-
-                        </div>
 </asp:Content>

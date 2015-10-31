@@ -26,6 +26,7 @@
     <Property Name="Premio_Dos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="Premio_Tres" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <NavigationProperty Name="Maraton_Usuario" Relationship="MaratonModel.FK_Maraton_Usuario_Maraton" FromRole="Maraton" ToRole="Maraton_Usuario" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="0" />
   </EntityType>
   <EntityType Name="Maraton_Usuario">
     <Key>

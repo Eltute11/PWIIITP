@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Global.master.cs" Inherits="Presentacion.Global" %>
+﻿  <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Global.master.cs" Inherits="Presentacion.Global" %>
 
 <%@ Register Src="~/UserControl/ucFooter.ascx" TagPrefix="uc1" TagName="ucFooter" %>
  

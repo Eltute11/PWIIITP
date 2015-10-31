@@ -6,5 +6,3 @@ C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.xm
 C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
 C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.dll
 C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
-C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\Entidades.dll
-C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\Entidades.pdb

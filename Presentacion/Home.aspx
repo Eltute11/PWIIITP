@@ -23,7 +23,6 @@
                         <li class="list-group-item">
                             <span class="badge">1</span>
                             Diego Trefiletti
-                            <strong>02:52:34</strong>
                         </li>
                         <li class="list-group-item">
                             <span class="badge">2</span>
@@ -123,7 +122,7 @@
                             <div class="form-group">
                                 <div class="col-lg-10 col-lg-offset-2">
                                     <asp:Button ID="Button1" class="btn btn-primary" runat="server" Text="¡Comenzar!" OnClick="btnRegistrar_Click" />
-                                    <asp:Label ID="lblMensaje" runat="server" Text="Usuario creado."></asp:Label>
+                                    <asp:Label ID="lblMensaje" runat="server"></asp:Label>
                                 </div>
                             </div>
                         </fieldset>

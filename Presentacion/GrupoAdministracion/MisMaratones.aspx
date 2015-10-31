@@ -20,6 +20,7 @@
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="proxima">
                         <h4>Maratones a correr</h4>
+                        <!--
                         <table class="table table-striped table-hover ">
                             <thead>
                                 <tr>
@@ -80,6 +81,9 @@
                                 </tr>
                             </tbody>
                         </table>
+                        -->
+
+                        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
                     </div>
 
                     <div class="tab-pane fade" id="historial">

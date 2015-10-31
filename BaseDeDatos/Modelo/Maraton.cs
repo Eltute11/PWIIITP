@@ -27,6 +27,7 @@ namespace BaseDeDatos.Modelo
         public decimal Premio_Uno { get; set; }
         public decimal Premio_Dos { get; set; }
         public decimal Premio_Tres { get; set; }
+        public DateTime Fecha { get; set; }
     
         public virtual ICollection<Maraton_Usuario> Maraton_Usuario { get; set; }
     }

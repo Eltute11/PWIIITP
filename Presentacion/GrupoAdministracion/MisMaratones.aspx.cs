@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BaseDeDatos;
+using BaseDeDatos.Modelo;
 
 namespace Presentacion.GrupoAdministracion
 {
@@ -11,7 +13,10 @@ namespace Presentacion.GrupoAdministracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var maratonRepo = new MaratonRepositorio();
 
+            GridView1.DataSource = maratonRepo.ObtenerUltima();
+            GridView1.DataBind();
         }
     }
 }

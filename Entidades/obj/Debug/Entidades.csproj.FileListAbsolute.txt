@@ -1,5 +1,0 @@
-C:\Users\Diego\Documents\GitHub\PWIIITP\Entidades\bin\Debug\Entidades.dll
-C:\Users\Diego\Documents\GitHub\PWIIITP\Entidades\bin\Debug\Entidades.pdb
-C:\Users\Diego\Documents\GitHub\PWIIITP\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
-C:\Users\Diego\Documents\GitHub\PWIIITP\Entidades\obj\Debug\Entidades.dll
-C:\Users\Diego\Documents\GitHub\PWIIITP\Entidades\obj\Debug\Entidades.pdb

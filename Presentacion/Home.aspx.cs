@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Entidades;
-using Negocio;
+using BaseDeDatos;
+using BaseDeDatos.Modelo;
 
 namespace Presentacion
 {
@@ -15,20 +15,25 @@ namespace Presentacion
         {
 
         }
-
+                
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
-            oUsuario oUsuario = new oUsuario();
-            oUsuario.nombre = txtNombre.Text;
-            oUsuario.apellido = txtApellido.Text;
-            oUsuario.clave = txtClave.Text;
-            oUsuario.residencia = txtResidencia.Text;
-            oUsuario.fechaNacimiento = Convert.ToDateTime(txtFechaNacimiento.Text);
-            oUsuario.administrador = false;
-            oUsuario.email = txtEmail.Text;
+            var usuarioRepo = new UsuarioRepositorio();
 
-            UsuarioNegocio.Registrar(oUsuario);
-                
+            var usuario = new Usuario();
+
+            usuario.Nombre = txtNombre.Text;
+            usuario.Apellido = txtApellido.Text;
+            usuario.Clave = txtClave.Text;
+            usuario.Residencia = txtResidencia.Text;
+            usuario.Fecha_Nacimiento = Convert.ToDateTime(txtFechaNacimiento.Text);
+            usuario.Administrador = false;
+            usuario.Email = txtEmail.Text;
+
+            if (usuarioRepo.Crear(usuario) > 0)
+                lblMensaje.Text = "Usuario creado.";
+            else
+                lblMensaje.Text = "No se pudo crear el Usuario";
         }
 
     }

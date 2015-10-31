@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Maraton">
       <EntityTypeMapping TypeName="MaratonModel.Maraton">
         <MappingFragment StoreEntitySet="Maraton">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Cant_Participantes" ColumnName="Cant_Participantes" />

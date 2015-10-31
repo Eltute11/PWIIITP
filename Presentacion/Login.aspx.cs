@@ -4,8 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Entidades;
-using Negocio;
+using BaseDeDatos;
 
 namespace Presentacion
 {
@@ -18,25 +17,35 @@ namespace Presentacion
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            oUsuario oUsuario = new oUsuario();
-            oUsuario.email = txtEmail.Text;
-            oUsuario.clave = txtClave.Text;
-            oUsuario.administrador = chkSoyAdministrador.Checked;
+            var usuarioRepo = new UsuarioRepositorio();
 
-            if (UsuarioNegocio.Login(oUsuario))
+            var usuario = new BaseDeDatos.Modelo.Usuario();
+
+            usuario.Email = txtEmail.Text;
+            usuario.Clave = txtClave.Text;
+
+            usuario = usuarioRepo.Obtener(txtEmail.Text, txtClave.Text);
+
+            if (usuario != null)
             {
-                if (oUsuario.administrador)
+                if (chkSoyAdministrador.Checked)
                 {
-                    Response.Redirect(@"\GrupoAdministracion\MisMaratones.aspx", false);
+                    if (!usuario.Administrador)
+                        lblMensaje.Text = "¡Usuario o Perfil Inválidos!";
+                    
+                    else
+                        Response.Redirect(@"\GrupoAdministracion\MisMaratones.aspx", false);
                 }
+
                 else
                 {
                     Response.Redirect(@"\GrupoUsuario\MisMaratones.aspx", false);
                 }
+
             }
-            else 
+            else
             {
-                lblMensaje.Visible = true;   
+                lblMensaje.Text = "¡Usuario o Perfil Inválidos!";
             }
         }
     }

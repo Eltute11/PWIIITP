@@ -196,13 +196,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Entidades\Entidades.csproj">
-      <Project>{45c5f627-91da-4b9d-aa8b-9defb0faf846}</Project>
-      <Name>Entidades</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Negocio\Negocio.csproj">
-      <Project>{17e38df1-026e-4293-8d36-c0593c99acba}</Project>
-      <Name>Negocio</Name>
+    <ProjectReference Include="..\BaseDeDatos\BaseDeDatos.csproj">
+      <Project>{45592981-8a91-4da9-8156-2e833a88d5b8}</Project>
+      <Name>BaseDeDatos</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
