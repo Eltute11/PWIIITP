@@ -83,7 +83,7 @@
                         </table>
                         -->
 
-                        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+                        
                     </div>
 
                     <div class="tab-pane fade" id="historial">

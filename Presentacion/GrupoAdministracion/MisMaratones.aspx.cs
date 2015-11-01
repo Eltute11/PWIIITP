@@ -13,10 +13,7 @@ namespace Presentacion.GrupoAdministracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var maratonRepo = new MaratonRepositorio();
 
-            GridView1.DataSource = maratonRepo.ObtenerUltima();
-            GridView1.DataBind();
         }
     }
 }
