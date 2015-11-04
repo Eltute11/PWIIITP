@@ -25,12 +25,21 @@
                             <div class="form-group">
                                 <label for="cant" class="col-lg-1 control-label">Fecha</label>
                                 <div class="col-lg-3">
-                                    <asp:TextBox ID="txtFechaSalida" class="form-control" placeholder="Nombre de maratón" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtFechaSalida" class="form-control" placeholder="dd/mm/aaaa" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvFechaSalida" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaSalida" Display="Dynamic"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="cant" class="col-lg-1 control-label">Participantes</label>
+                                <label for="txtKm" class="col-lg-1 control-label">Km</label>
+                                <div class="col-lg-2">
+                                    <asp:TextBox ID="txtKm" class="form-control" placeholder="Km" runat="server" MaxLength="3"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvKm" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtKm" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="revKm" runat="server" ErrorMessage="Solo números" ValidationExpression="^[0-9]*" ControlToValidate="txtKm" Display="Dynamic"></asp:RegularExpressionValidator>
+                                </div>
+                            </div>
+                               
+                            <div class="form-group">
+                                 <label for="cant" class="col-lg-1 control-label">Participantes</label>
                                 <div class="col-lg-3">
                                     <asp:TextBox ID="txtCantidad" runat="server" class="form-control" placeholder="Cant. Maxima de participantes"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvCant" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtCantidad" Display="Dynamic"></asp:RequiredFieldValidator>

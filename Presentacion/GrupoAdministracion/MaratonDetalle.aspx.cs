@@ -30,6 +30,7 @@ namespace Presentacion.GrupoAdministracion
             maraton.Premio_Dos = Convert.ToDecimal(txtPremio2.Text);
             maraton.Premio_Tres = Convert.ToDecimal(txtPremio3.Text);
             maraton.Fecha = Convert.ToDateTime(txtFechaSalida.Text);
+            maraton.Km = Convert.ToInt32(txtKm.Text);
 
             if (maratonRepo.Crear(maraton) > 0)
                 lblMensaje.Text = "Maraton creada.";
