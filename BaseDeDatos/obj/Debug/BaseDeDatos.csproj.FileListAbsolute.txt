@@ -6,3 +6,11 @@ C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.xm
 C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
 C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.dll
 C:\Users\Diego\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.dll.config
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.dll
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.dll
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.xml
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.dll
+C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
