@@ -40,12 +40,6 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputPassword" class="col-lg-2 control-label"></label>
-                            <div class="col-lg-5">
-                                <asp:CheckBox ID="chkSoyAdministrador" runat="server" />Soy Administrador
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
                                 <asp:Button ID="btnIngresar" class="btn btn-primary" runat="server" Text="¡Ingresar!" OnClick="btnIngresar_Click" />
                                 <asp:Label ID="lblMensaje" runat="server" Text="" class="text-danger"></asp:Label>

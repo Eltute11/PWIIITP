@@ -28,20 +28,14 @@ namespace Presentacion
 
             if (usuario != null)
             {
-                if (chkSoyAdministrador.Checked)
+                if (usuario.Administrador)
                 {
-                    if (!usuario.Administrador)
-                        lblMensaje.Text = "¡Usuario o Perfil Inválidos!";
-                    
-                    else
-                        Response.Redirect(@"\GrupoAdministracion\MisMaratones.aspx", false);
+                    Response.Redirect(@"\GrupoAdministracion\MisMaratones.aspx", false);
                 }
-
                 else
                 {
                     Response.Redirect(@"\GrupoUsuario\MisMaratones.aspx", false);
                 }
-
             }
             else
             {

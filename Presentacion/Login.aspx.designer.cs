@@ -67,15 +67,6 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPass;
         
         /// <summary>
-        /// chkSoyAdministrador control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkSoyAdministrador;
-        
-        /// <summary>
         /// btnIngresar control.
         /// </summary>
         /// <remarks>
