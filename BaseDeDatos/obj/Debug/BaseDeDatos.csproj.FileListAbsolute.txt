@@ -14,3 +14,19 @@ C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\bin\Debug\Ent
 C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
 C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.dll
 C:\Users\jurco_000\Desktop\Repositorios GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
+C:\Users\Matias\Desktop\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.dll.config
+C:\Users\Matias\Desktop\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.dll
+C:\Users\Matias\Desktop\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\Matias\Desktop\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.dll
+C:\Users\Matias\Desktop\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.xml
+C:\Users\Matias\Desktop\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
+C:\Users\Matias\Desktop\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.dll
+C:\Users\Matias\Desktop\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
+C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\bin\Debug\BaseDeDatos.dll.config
+C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\bin\Debug\BaseDeDatos.dll
+C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\bin\Debug\EntityFramework.dll
+C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\bin\Debug\EntityFramework.xml
+C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
+C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\obj\Debug\BaseDeDatos.dll
+C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\obj\Debug\BaseDeDatos.pdb

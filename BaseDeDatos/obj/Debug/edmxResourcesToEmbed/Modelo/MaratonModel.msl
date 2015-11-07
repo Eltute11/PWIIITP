@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Maraton">
       <EntityTypeMapping TypeName="MaratonModel.Maraton">
         <MappingFragment StoreEntitySet="Maraton">
+          <ScalarProperty Name="Km" ColumnName="Km" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
@@ -19,6 +20,7 @@
     <EntitySetMapping Name="Maraton_Usuario">
       <EntityTypeMapping TypeName="MaratonModel.Maraton_Usuario">
         <MappingFragment StoreEntitySet="Maraton_Usuario">
+          <ScalarProperty Name="Posicion" ColumnName="Posicion" />
           <ScalarProperty Name="MaratonID" ColumnName="MaratonID" />
           <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
           <ScalarProperty Name="Lista_Espera" ColumnName="Lista_Espera" />

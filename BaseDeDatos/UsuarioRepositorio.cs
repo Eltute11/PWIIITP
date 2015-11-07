@@ -7,7 +7,7 @@ using BaseDeDatos.Modelo;
 
 namespace BaseDeDatos
 {
-    public class UsuarioRepositorio
+    public class UsuarioRepositorio 
     {
         private MaratonEntities Contexto { get; set; }
 
@@ -19,6 +19,7 @@ namespace BaseDeDatos
         public int Crear(Usuario usuario)
         {
             Contexto.Usuario.Add(usuario);
+
             Contexto.SaveChanges();
 
             return usuario.ID;
@@ -35,7 +36,7 @@ namespace BaseDeDatos
 
         public bool Actualizar(Modelo.Usuario usuario)
         {
-            // Contexto.Usuario.
+           // Contexto.Usuario.
 
             return true;
         }
