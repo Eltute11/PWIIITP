@@ -17,9 +17,9 @@ namespace BaseDeDatos.Modelo
         public int MaratonID { get; set; }
         public int UsuarioID { get; set; }
         public bool Lista_Espera { get; set; }
-        public Nullable<System.DateTime> Tiempo_Llegada { get; set; }
-        public bool Presente { get; set; }
-        public bool Abandono { get; set; }
+        public Nullable<System.TimeSpan> Tiempo_Llegada { get; set; }
+        public Nullable<bool> Presente { get; set; }
+        public Nullable<bool> Abandono { get; set; }
     
         public virtual Maraton Maraton { get; set; }
         public virtual Usuario Usuario { get; set; }

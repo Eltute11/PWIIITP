@@ -34,7 +34,8 @@
                                     </Columns>
                                 </asp:GridView>
                             </div>
-                            <asp:SqlDataSource ID="sdsUsuarioMaratonesPendiente" runat="server" ConnectionString="<%$ ConnectionStrings:MaratonConnectionString %>" DeleteCommand="DELETE FROM [Maraton] WHERE [ID] = @ID" InsertCommand="INSERT INTO [Maraton] ([Nombre], [Cant_Participantes], [Lugar_Salida], [Cant_Lista_Espera], [Premio_Uno], [Premio_Dos], [Premio_Tres], [fecha]) VALUES (@Nombre, @Cant_Participantes, @Lugar_Salida, @Cant_Lista_Espera, @Premio_Uno, @Premio_Dos, @Premio_Tres, @fecha)" ProviderName="<%$ ConnectionStrings:MaratonConnectionString.ProviderName %>" SelectCommand="SELECT Nombre, Fecha, Km, ID FROM Maraton" UpdateCommand="UPDATE [Maraton] SET [Nombre] = @Nombre, [Cant_Participantes] = @Cant_Participantes, [Lugar_Salida] = @Lugar_Salida, [Cant_Lista_Espera] = @Cant_Lista_Espera, [Premio_Uno] = @Premio_Uno, [Premio_Dos] = @Premio_Dos, [Premio_Tres] = @Premio_Tres, [fecha] = @fecha WHERE [ID] = @ID">
+                            <%--<asp:SqlDataSource ID="sdsUsuarioMaratonesPendiente" runat="server" ConnectionString="<%$ ConnectionStrings:MaratonConnectionString %>" ProviderName="<%$ ConnectionStrings:MaratonConnectionString.ProviderName %>" SelectCommand="SELECT A.Nombre, A.Fecha, A.Km, A.ID FROM Maraton AS A INNER JOIN Maraton_Usuario AS B ON A.ID = B.MaratonID WHERE (B.UsuarioID = 1)">--%>
+                            <asp:SqlDataSource ID="sdsUsuarioMaratonesPendiente" runat="server" ConnectionString="<%$ ConnectionStrings:MaratonConnectionString %>" ProviderName="<%$ ConnectionStrings:MaratonConnectionString.ProviderName %>">
                                 <DeleteParameters>
                                     <asp:Parameter Name="ID" Type="Int32" />
                                 </DeleteParameters>

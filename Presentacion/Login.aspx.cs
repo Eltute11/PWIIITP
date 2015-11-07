@@ -18,13 +18,13 @@ namespace Presentacion
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
             var usuarioRepo = new UsuarioRepositorio();
-
             var usuario = new BaseDeDatos.Modelo.Usuario();
 
             usuario.Email = txtEmail.Text;
             usuario.Clave = txtClave.Text;
 
             usuario = usuarioRepo.Obtener(txtEmail.Text, txtClave.Text);
+            Session["UsuarioID"] = usuario.ID;
 
             if (usuario != null)
             {
