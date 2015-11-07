@@ -62,90 +62,28 @@
                                     <asp:Parameter Name="ID" Type="Int32" />
                                 </UpdateParameters>
                             </asp:SqlDataSource>
-                        </form>
+                        
                     </div>
 
                     <div class="tab-pane fade" id="historial">
                         <h4>Historial de Maratones corridas</h4>
-                        <table class="table table-striped table-hover ">
-                            <thead>
-                                <tr>
-                                    <th>Nombre de Marat&oacute;n</th>
-                                    <th>Lugar de Salida</th>
-                                    <th>¿Me present&eacute;?</th>
-                                    <th>Posici&oacute;n final</th>
-                                    <th>¿Abandon&eacute;?</th>
-                                    <th>Tiempo</th>
-                                    <th>Premio</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>04:30:40hs</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>04:30:40hs</td>
-                                    <td>No</td>
-
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>04:30:40hs</td>
-                                    <td>$700</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>03:30:40hs</td>
-                                    <td>$1200</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>04:30:40hs</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>04:30:40hs</td>
-                                    <td>No</td>
-                                </tr>
-                                <tr>
-                                    <td>7</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>04:50:40hs</td>
-                                    <td>$900</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                         <asp:GridView ID="gvUsuarioMaratonesHistorial" runat="server" AutoGenerateColumns="False" DataSourceID="sdsUsuarioMaratonesHistorial" CssClass="table table-striped table-hover">
+                            <Columns>
+                                <asp:BoundField DataField="Nombre" HeaderText="Nombre de Maratón" SortExpression="Nombre" />
+                                <asp:BoundField DataField="Lugar_Salida" HeaderText="Lugar de Salida" SortExpression="Lugar_Salida" />
+                                <asp:CheckBoxField DataField="Presente" HeaderText="¿Me presenté?" SortExpression="Presente" />
+                                <asp:BoundField DataField="Posicion" HeaderText="Posición final" SortExpression="Posicion" />
+                                <asp:CheckBoxField DataField="Abandono" HeaderText="¿Abandoné?" SortExpression="Abandono" />
+                                <asp:BoundField DataField="Tiempo_Llegada" HeaderText="Tiempo" SortExpression="Tiempo_Llegada" />
+                                <asp:BoundField DataField="Premio" HeaderText="Premio" ReadOnly="True" SortExpression="Premio" />
+                            </Columns>
+                        </asp:GridView> 
+                        <asp:SqlDataSource ID="sdsUsuarioMaratonesHistorial" runat="server" ConnectionString="<%$ ConnectionStrings:MaratonConnectionString %>"></asp:SqlDataSource>
+                        <asp:EntityDataSource ID="EntityDataSource1" runat="server">
+                        </asp:EntityDataSource>
+                        
+                        </form>
+                        
                         <p>Si aun no retiraste tu premio por haber participado del podio, podes hacerlo en Carlos Arjona 154 1er piso, Capital Federal.</p>
                     </div>
                 </div>

@@ -68,7 +68,7 @@
                                     <asp:TextBox ID="txtPremio1" class="form-control" runat="server" placeholder="$ 500,00 - $ 5.000,00"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvPremio1" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtPremio1" Display="Dynamic"></asp:RequiredFieldValidator>
                                     <asp:RegularExpressionValidator ID="revPremio1" runat="server" ErrorMessage="Solo números" ValidationExpression="^[0-9]*" ControlToValidate="txtPremio1" Display="Dynamic"></asp:RegularExpressionValidator>                                   
-                                    <asp:RangeValidator ID="rvPremio1" runat="server" ErrorMessage="Rango no valido" ControlToValidate="txtPremio1" MaximumValue="5000" MinimumValue="500" Display="Dynamic"></asp:RangeValidator>
+                                    <asp:RangeValidator ID="rvPremio1" runat="server" ErrorMessage="Rango no valido" ControlToValidate="txtPremio1" MaximumValue="5000" MinimumValue="500" Display="Dynamic" Type="Double"></asp:RangeValidator>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -77,7 +77,7 @@
                                     <asp:TextBox ID="txtPremio2" class="form-control" runat="server" placeholder="$ 500,00 - $ 5.000,00"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvPremio2" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtPremio2" Display="Dynamic"></asp:RequiredFieldValidator>
                                     <asp:RegularExpressionValidator ID="revPremio2" runat="server" ErrorMessage="Solo números" ValidationExpression="^[0-9]*" ControlToValidate="txtPremio2" Display="Dynamic"></asp:RegularExpressionValidator>                                   
-                                    <asp:RangeValidator ID="rvPremio2" runat="server" ErrorMessage="Rango no valido" ControlToValidate="txtPremio2" MaximumValue="5000" MinimumValue="500" Display="Dynamic"></asp:RangeValidator>
+                                    <asp:RangeValidator ID="rvPremio2" runat="server" ErrorMessage="Rango no valido" ControlToValidate="txtPremio2" MaximumValue="5000" MinimumValue="500" Display="Dynamic" Type="Double"></asp:RangeValidator>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -86,7 +86,7 @@
                                     <asp:TextBox ID="txtPremio3" class="form-control" runat="server" placeholder="$ 500,00 - $ 5.000,00"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvPremio3" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtPremio3" Display="Dynamic"></asp:RequiredFieldValidator>
                                     <asp:RegularExpressionValidator ID="revPremio3" runat="server" ErrorMessage="Solo números" ValidationExpression="^[0-9]*" ControlToValidate="txtPremio3" Display="Dynamic"></asp:RegularExpressionValidator>                                   
-                                    <asp:RangeValidator ID="rvPremio3" runat="server" ErrorMessage="Rango no valido" ControlToValidate="txtPremio3" MaximumValue="5000" MinimumValue="500" Display="Dynamic"></asp:RangeValidator>
+                                    <asp:RangeValidator ID="rvPremio3" runat="server" ErrorMessage="Rango no valido" ControlToValidate="txtPremio3" MaximumValue="5000" MinimumValue="500" Display="Dynamic" Type="Double"></asp:RangeValidator>
                                 </div>
                             </div>
                             <div>
