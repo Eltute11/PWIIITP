@@ -30,3 +30,11 @@ C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\bin\Debug\EntityFramework.xml
 C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
 C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\obj\Debug\BaseDeDatos.dll
 C:\Users\Matias\Desktop\PWIIITP_prueba\BaseDeDatos\obj\Debug\BaseDeDatos.pdb
+\\Mac\Home\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.dll.config
+\\Mac\Home\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.dll
+\\Mac\Home\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\BaseDeDatos.pdb
+\\Mac\Home\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\GitHub\PWIIITP\BaseDeDatos\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.dll
+\\Mac\Home\Documents\GitHub\PWIIITP\BaseDeDatos\obj\Debug\BaseDeDatos.pdb

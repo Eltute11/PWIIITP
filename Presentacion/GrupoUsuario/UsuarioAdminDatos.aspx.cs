@@ -12,16 +12,16 @@ namespace Presentacion.GrupoUsuario
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) 
+            if (!IsPostBack)
             {
                 Usuario usuario = new Usuario(); // Lo obtengo de BaseDeDatos.Modelo.Usuario
                 usuario = (Usuario)Session["Usuario"];
 
                 txtNombre.Text = usuario.Nombre;
                 txtApellido.Text = usuario.Apellido;
-                txtFechaNacimiento.Text = Convert.ToString(usuario.Fecha_Nacimiento).Substring(0, 10);  
+                txtFechaNacimiento.Text = Convert.ToString(usuario.Fecha_Nacimiento).Substring(0, 10);
                 txtResidencia.Text = usuario.Residencia;
-       
+
             }
         }
 
@@ -32,12 +32,9 @@ namespace Presentacion.GrupoUsuario
             usuarioModificar = (Usuario)Session["Usuario"];
 
             int usuarioID = usuarioModificar.ID;
-
+            
             usuarioRepo.ModificarDatosUsuario(usuarioID, txtNombre.Text, txtApellido.Text, txtFechaNacimiento.Text, txtResidencia.Text);
-
-
-
-
+            
 
         }
     }

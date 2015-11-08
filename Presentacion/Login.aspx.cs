@@ -33,7 +33,7 @@ namespace Presentacion
 
                 if (usuario.Administrador)
                 {
-                    Response.Redirect(@"\GrupoAdministracion\MisMaratones.aspx", false);
+                    Response.Redirect(@"\GrupoAdministracion\Maratones.aspx", false);
                 }
                 else
                 {

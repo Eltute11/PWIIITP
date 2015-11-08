@@ -72,3 +72,13 @@ C:\Users\Matias\Desktop\PWIIITP_prueba\Presentacion\bin\EntityFramework.xml
 C:\Users\Matias\Desktop\PWIIITP_prueba\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 C:\Users\Matias\Desktop\PWIIITP_prueba\Presentacion\obj\Debug\Presentacion.dll
 C:\Users\Matias\Desktop\PWIIITP_prueba\Presentacion\obj\Debug\Presentacion.pdb
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\bin\Presentacion.dll.config
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\bin\Presentacion.dll
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\bin\Presentacion.pdb
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\bin\BaseDeDatos.dll
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\bin\EntityFramework.dll
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\bin\BaseDeDatos.pdb
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\bin\EntityFramework.xml
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.dll
+\\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.pdb

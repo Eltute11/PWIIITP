@@ -67,7 +67,7 @@
     <Content Include="Css\style.css" />
     <Content Include="GrupoAdministracion\MaratonDetalle.aspx" />
     <Content Include="GrupoAdministracion\MaratonResultado.aspx" />
-    <Content Include="GrupoAdministracion\MisMaratones.aspx" />
+    <Content Include="GrupoAdministracion\Maratones.aspx" />
     <Content Include="GrupoUsuario\MisMaratones.aspx" />
     <Content Include="GrupoUsuario\UsuarioAdminDatos.aspx" />
     <Content Include="GrupoUsuario\UsuarioInscripcionMaratones.aspx" />
@@ -82,6 +82,7 @@
     <Content Include="Login.aspx" />
     <Content Include="UserControl\ucFooter.ascx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Consejos.aspx.cs">
@@ -105,12 +106,12 @@
     <Compile Include="GrupoAdministracion\MaratonResultado.aspx.designer.cs">
       <DependentUpon>MaratonResultado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GrupoAdministracion\MisMaratones.aspx.cs">
-      <DependentUpon>MisMaratones.aspx</DependentUpon>
+    <Compile Include="GrupoAdministracion\Maratones.aspx.cs">
+      <DependentUpon>Maratones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GrupoAdministracion\MisMaratones.aspx.designer.cs">
-      <DependentUpon>MisMaratones.aspx</DependentUpon>
+    <Compile Include="GrupoAdministracion\Maratones.aspx.designer.cs">
+      <DependentUpon>Maratones.aspx</DependentUpon>
     </Compile>
     <Compile Include="GrupoUsuario\MisMaratones.aspx.cs">
       <DependentUpon>MisMaratones.aspx</DependentUpon>
@@ -182,6 +183,13 @@
     </Compile>
     <Compile Include="UserControl\ucFooter.ascx.designer.cs">
       <DependentUpon>ucFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

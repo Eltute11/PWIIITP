@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/GrupoAdmin.master" AutoEventWireup="true" CodeBehind="MisMaratones.aspx.cs" Inherits="Presentacion.GrupoAdministracion.MisMaratones" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/GrupoAdmin.master" AutoEventWireup="true" CodeBehind="Maratones.aspx.cs" Inherits="Presentacion.GrupoAdministracion.MisMaratones" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphAdminHead" runat="server">
-    <title>Administrador - Mis Maratones</title>
+    <title>Administrador - Maratones</title>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphAdminBody" runat="server">
@@ -20,7 +20,7 @@
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="proxima">
                         <h4>Maratones a correr</h4>
-                        <!--
+                        
                         <table class="table table-striped table-hover ">
                             <thead>
                                 <tr>
@@ -81,7 +81,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                        -->
+                        
 
                     
                     </div>
