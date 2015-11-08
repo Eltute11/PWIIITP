@@ -25,7 +25,7 @@
                             <div class="form-group">
                                 <label for="cant" class="col-lg-1 control-label">Fecha</label>
                                 <div class="col-lg-3">
-                                    <asp:TextBox ID="txtFechaSalida" class="form-control" placeholder="dd/mm/aaaa" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtFechaSalida" class="form-control" placeholder="dd/mm/aaaa hh:mm:ss" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvFechaSalida" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaSalida" Display="Dynamic"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
