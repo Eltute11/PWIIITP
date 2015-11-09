@@ -28,7 +28,7 @@
                         <ul class="dropdown-menu" aria-labelledby="themes">
                             <li><a href="../GrupoAdministracion/MaratonDetalle.aspx">Nueva</a></li>
                             <li class="divider"></li>
-                            <li><a href="../GrupoAdministracion/MisMaratones.aspx">Mis Maratones</a></li>
+                            <li><a href="../GrupoAdministracion/Maratones.aspx">Mis Maratones</a></li>
                         </ul>
                     </li> 
 

@@ -9,7 +9,7 @@ using BaseDeDatos.Modelo;
 
 namespace Presentacion.GrupoAdministracion
 {
-    public partial class MisMaratones : System.Web.UI.Page
+    public partial class Maratones : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
