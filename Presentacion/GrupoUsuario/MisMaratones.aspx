@@ -25,42 +25,22 @@
                             <div>
                             </div>
                             <div class="bs-component">
-                                <asp:GridView ID="gvUsuarioMaratonesPendientes" runat="server" CssClass="table table-striped table-hover" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="sdsUsuarioMaratonesPendiente" EmptyDataText="No hay registros de datos para mostrar.">
+                                <asp:GridView ID="gvUsuarioMaratonesPendientes" runat="server" CssClass="table table-striped table-hover" AllowSorting="False" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="sdsUsuarioMaratonesPendiente" EmptyDataText="No hay registros de datos para mostrar.">
                                     <Columns>
+                                        <asp:BoundField DataField="ID" HeaderText="Nro Maraton" SortExpression="ID"/>
                                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                                         <asp:BoundField DataField="Fecha" HeaderText="Fecha" SortExpression="Fecha" DataFormatString="{0:d}" />
                                         <asp:BoundField DataField="Km" HeaderText="Km" SortExpression="Km" />
-                                        <asp:ButtonField Text="Anular Inscripcion" ButtonType="Button" ControlStyle-CssClass="btn btn-warning" />
+                                        <%--<asp:ButtonField Text="Anular Inscripcion" ButtonType="Button" ControlStyle-CssClass="btn btn-warning" />--%>
+                                         <asp:TemplateField> 
+                                         <ItemTemplate>
+                                            <asp:Button ID="btnAnularInsc" runat="server" OnClick="btnAnularInsc_Click"  ControlStyle-CssClass="btn btn-warning" Text="Anular Inscripcion" />
+                                        </ItemTemplate>
+                                        </asp:TemplateField>
                                     </Columns>
                                 </asp:GridView>
                             </div>
-                            <%--<asp:SqlDataSource ID="sdsUsuarioMaratonesPendiente" runat="server" ConnectionString="<%$ ConnectionStrings:MaratonConnectionString %>" ProviderName="<%$ ConnectionStrings:MaratonConnectionString.ProviderName %>" SelectCommand="SELECT A.Nombre, A.Fecha, A.Km, A.ID FROM Maraton AS A INNER JOIN Maraton_Usuario AS B ON A.ID = B.MaratonID WHERE (B.UsuarioID = 1)">--%>
                             <asp:SqlDataSource ID="sdsUsuarioMaratonesPendiente" runat="server" ConnectionString="<%$ ConnectionStrings:MaratonConnectionString %>" ProviderName="<%$ ConnectionStrings:MaratonConnectionString.ProviderName %>">
-                                <DeleteParameters>
-                                    <asp:Parameter Name="ID" Type="Int32" />
-                                </DeleteParameters>
-                                <InsertParameters>
-                                    <asp:Parameter Name="Nombre" Type="String" />
-                                    <asp:Parameter Name="Cant_Participantes" Type="Int32" />
-                                    <asp:Parameter Name="Lugar_Salida" Type="String" />
-                                    <asp:Parameter Name="Cant_Lista_Espera" Type="Int32" />
-                                    <asp:Parameter Name="Premio_Uno" Type="Decimal" />
-                                    <asp:Parameter Name="Premio_Dos" Type="Decimal" />
-                                    <asp:Parameter Name="Premio_Tres" Type="Decimal" />
-                                    <asp:Parameter Name="Fecha" Type="DateTime"  />
-                                    <asp:Parameter Name="Km" Type="Int32" />
-                                </InsertParameters>
-                                <UpdateParameters>
-                                    <asp:Parameter Name="Nombre" Type="String" />
-                                    <asp:Parameter Name="Cant_Participantes" Type="Int32" />
-                                    <asp:Parameter Name="Lugar_Salida" Type="String" />
-                                    <asp:Parameter Name="Cant_Lista_Espera" Type="Int32" />
-                                    <asp:Parameter Name="Premio_Uno" Type="Decimal" />
-                                    <asp:Parameter Name="Premio_Dos" Type="Decimal" />
-                                    <asp:Parameter Name="Premio_Tres" Type="Decimal" />
-                                    <asp:Parameter Name="fecha" Type="DateTime" />
-                                    <asp:Parameter Name="ID" Type="Int32" />
-                                </UpdateParameters>
                             </asp:SqlDataSource>
                         
                     </div>
