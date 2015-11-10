@@ -33,5 +33,13 @@ namespace BaseDeDatos
 
             return _maratones;
         }
+
+        public List<Maraton> ObtenerPendientesUsuario(Usuario usu)
+        {
+            return (from m in Contexto.Maraton
+                    join mu in Contexto.Maraton_Usuario on m.ID equals mu.MaratonID
+                    where mu.UsuarioID == usu.ID
+                    select m).ToList();
+        }
     }
 }

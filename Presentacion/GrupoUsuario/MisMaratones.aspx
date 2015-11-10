@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/GrupoUsuario.master" AutoEventWireup="true" CodeBehind="MisMaratones.aspx.cs" Inherits="Presentacion.GrupoUsuario.MisMaratones" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/GrupoUsuario.master" AutoEventWireup="true" CodeBehind="MisMaratones.aspx.cs" Inherits="Presentacion.GrupoUsuario.MisMaratones"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphUsuarioHead" runat="server">
     <title>Historial de Maratones</title>
@@ -25,24 +25,17 @@
                             <div>
                             </div>
                             <div class="bs-component">
-                                <asp:GridView ID="gvUsuarioMaratonesPendientes" runat="server" CssClass="table table-striped table-hover" AllowSorting="False" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="sdsUsuarioMaratonesPendiente" EmptyDataText="No hay registros de datos para mostrar.">
+                                <asp:GridView ID="gvUsuarioMaratonesPendientes" OnRowCommand="gvUsuarioMaratonesPendientes_RowCommand"  runat="server" CssClass="table table-striped table-hover" AutoGenerateColumns="False" DataKeyNames="ID" EmptyDataText="No hay registros de datos para mostrar."> 
                                     <Columns>
                                         <asp:BoundField DataField="ID" HeaderText="Nro Maraton" SortExpression="ID"/>
                                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                                         <asp:BoundField DataField="Fecha" HeaderText="Fecha" SortExpression="Fecha" DataFormatString="{0:d}" />
                                         <asp:BoundField DataField="Km" HeaderText="Km" SortExpression="Km" />
                                         <%--<asp:ButtonField Text="Anular Inscripcion" ButtonType="Button" ControlStyle-CssClass="btn btn-warning" />--%>
-                                         <asp:TemplateField> 
-                                         <ItemTemplate>
-                                            <asp:Button ID="btnAnularInsc" runat="server" OnClick="btnAnularInsc_Click"  ControlStyle-CssClass="btn btn-warning" Text="Anular Inscripcion" />
-                                        </ItemTemplate>
-                                        </asp:TemplateField>
+                                        <asp:ButtonField ButtonType="Button" CommandName="Anular" ControlStyle-CssClass="btn btn-warning" Text="Anular Inscripcion"/>
                                     </Columns>
                                 </asp:GridView>
                             </div>
-                            <asp:SqlDataSource ID="sdsUsuarioMaratonesPendiente" runat="server" ConnectionString="<%$ ConnectionStrings:MaratonConnectionString %>" ProviderName="<%$ ConnectionStrings:MaratonConnectionString.ProviderName %>">
-                            </asp:SqlDataSource>
-                        
                     </div>
 
                     <div class="tab-pane fade" id="historial">

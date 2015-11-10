@@ -82,3 +82,7 @@ C:\Users\Matias\Desktop\PWIIITP_prueba\Presentacion\obj\Debug\Presentacion.pdb
 \\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.dll
 \\Mac\Home\Documents\GitHub\PWIIITP\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\jurco_000\Desktop\PWIIITP\Presentacion\bin\BaseDeDatos.dll
+C:\Users\jurco_000\Desktop\PWIIITP\Presentacion\bin\EntityFramework.dll
+C:\Users\jurco_000\Desktop\PWIIITP\Presentacion\bin\BaseDeDatos.pdb
+C:\Users\jurco_000\Desktop\PWIIITP\Presentacion\bin\EntityFramework.xml

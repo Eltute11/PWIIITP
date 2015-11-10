@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/GrupoAdmin.master" AutoEventWireup="true" CodeBehind="Maratones.aspx.cs" Inherits="Presentacion.GrupoAdministracion.MisMaratones" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/GrupoAdmin.master" AutoEventWireup="true" CodeBehind="Maratones.aspx.cs" Inherits="Presentacion.GrupoAdministracion.Maratones" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphAdminHead" runat="server">
     <title>Administrador - Maratones</title>
