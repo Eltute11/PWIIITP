@@ -40,7 +40,7 @@
 
                     <div class="tab-pane fade" id="historial">
                         <h4>Historial de Maratones corridas</h4>
-                         <asp:GridView ID="gvUsuarioMaratonesHistorial" runat="server" AutoGenerateColumns="False" DataSourceID="sdsUsuarioMaratonesHistorial" CssClass="table table-striped table-hover">
+                         <asp:GridView ID="gvUsuarioMaratonesHistorial" runat="server" AutoGenerateColumns="False" DataSourceID="sdsUsuarioMaratonesHistorial" CssClass="table table-striped table-hover" EmptyDataText="No has realizado ninguna maraton"> 
                             <Columns>
                                 <asp:BoundField DataField="Nombre" HeaderText="Nombre de Maratón" SortExpression="Nombre" />
                                 <asp:BoundField DataField="Lugar_Salida" HeaderText="Lugar de Salida" SortExpression="Lugar_Salida" />

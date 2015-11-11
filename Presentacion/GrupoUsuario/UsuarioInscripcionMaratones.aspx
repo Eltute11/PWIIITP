@@ -10,83 +10,28 @@
         <div class="col-lg-12">
             <h2>Inscripci&oacute;n a Marat&oacute;n</h2>
             <h5>El tiempo límite de inscripción a una determinada maratón, es hasta el día anterior de la realización de la misma.</h5>
-            <form class="form-horizontal">
+            <form class="form-horizontal" runat="server">
                 <fieldset>
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">Maratones no realizadas</h3>
                         </div>
                         <div class="panel-body">
-                            <table class="table table-striped table-hover ">
-                                <thead>
-                                    <tr>
-                                        <th>Nombre de Maratón</th>
-                                        <th>Fecha y hora comienzo</th>
-                                        <th>Lugar de salida</th>
-                                        <th>Km</th>
-                                        <th>Cupo Total</th>
-                                        <th>Inscriptos</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>
-                                            <buttom class="btn btn-danger">Cupo Completo</buttom>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>
-                                            <buttom class="btn btn-primary">Inscribirse</buttom>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>
-                                            <buttom class="btn btn-warning">En espera</buttom>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>
-                                            <buttom class="btn btn-primary">Inscribirse</buttom>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>Column content</td>
-                                        <td>
-                                            <buttom class="btn btn-primary">Inscribirse</buttom>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                          
+                               <asp:GridView ID="gvUsuarioInscripcionMaratones" OnRowCommand="gvUsuarioInscripcionMaratones_RowCommand" AutoGenerateColumns="false" runat="server" CssClass="table table-striped table-hover" DataKeyNames="ID" EmptyDataText="No hay registros de datos para mostrar.">
+                                <Columns>
+                                    <asp:BoundField DataField="ID" HeaderText="ID Maraton" />
+                                    <asp:BoundField DataField="Nombre" HeaderText="Nombre de Maraton" />
+                                    <asp:BoundField DataField="Fecha" HeaderText="Fecha y hora" />
+                                    <asp:BoundField DataField="Lugar_Salida" HeaderText="Lugar de Salida" />
+                                    <asp:BoundField DataField="Km" HeaderText="Km" />
+                                    <asp:BoundField DataField="Cant_Participantes" HeaderText="Cupo Total" />
+                                    <asp:ButtonField ButtonType="Button" CommandName="Inscribirse" Text="Inscribirse" ControlStyle-CssClass="btn btn-primary" />
+                                    <asp:ButtonField ButtonType="Button" CommandName="Espera" Text="En Espera" ControlStyle-CssClass="btn btn-warning" />
+                                    <asp:ButtonField ButtonType="Button" CommandName="CupoLleno" Text="Cupo Lleno" ControlStyle-CssClass="btn btn-danger" />
+                                        
+                                </Columns>
+                            </asp:GridView>
                         </div>
                     </div>
                 </fieldset>

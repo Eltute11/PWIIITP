@@ -49,11 +49,6 @@ namespace BaseDeDatos
         }
 
 
-        public bool Actualizar(Modelo.Usuario usuario)
-        {
-            // Contexto.Usuario.
-
-            return true;
-        }
+       
     }
 }
