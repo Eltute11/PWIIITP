@@ -18,7 +18,7 @@
             <!-- Ultima Maraton (Resultados) -->
             <div class="col-lg-6" > <!-- col-lg-offset-1 -->
                 <div class="bs-component">
-                    <asp:GridView ID="gvPosiciones" runat="server" AutoGenerateColumns="False" GridLines="None" AllowPaging="true" CssClass="list-group" RowStyle-CssClass="list-group-item" HeaderStyle-CssClass="list-group-item" Width="100%" EmptyDataText="No se realizaron maratones."> 
+                    <asp:GridView ID="gvPosiciones" runat="server" AutoGenerateColumns="False" GridLines="None" AllowPaging="true" CssClass="list-group" RowStyle-CssClass="list-group-item" HeaderStyle-CssClass="list-group-item" Width="100%" EmptyDataText="Todavia no estan disponibles los resultados."> 
                         <Columns>
                             <asp:BoundField DataField="Posicion" HeaderText="Posiciones de Ultima Maraton" ReadOnly="True" SortExpression="Posicion" />
                         </Columns>

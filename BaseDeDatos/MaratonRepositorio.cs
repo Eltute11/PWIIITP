@@ -98,8 +98,9 @@ namespace BaseDeDatos
                                            Premio_Uno = mu.Maraton.Premio_Uno,
                                            Premio_Dos = mu.Maraton.Premio_Dos,
                                            Premio_Tres = mu.Maraton.Premio_Tres,
-                                           mu.MaratonID
+                                           
                                        } into g
+                                       where g.Key.Fecha > DateTime.Now
                                        select new
                                        {
                                            Nombre_de_Maraton = g.Key.Nombre,
@@ -110,7 +111,7 @@ namespace BaseDeDatos
                                            Espera =
                                            (from mu2 in Contexto.Maraton_Usuario
                                             where
-                                            g.Key.MaratonID == mu2.MaratonID &&
+                                            g.Key.ID == mu2.MaratonID &&
                                             mu2.Lista_Espera == true
                                             select new
                                             {
@@ -145,14 +146,10 @@ namespace BaseDeDatos
         }
         public object ObtenerPosiciones()
         {
-            DateTime fecha = DateTime.Now;
-
-            var maximo = (from m in Contexto.Maraton
-                              where m.Fecha < fecha
-                              orderby m.Fecha descending
-                              select m.Fecha).FirstOrDefault();
-
-            //var maximo = Contexto.Maraton.Max(m => m.Fecha);
+            var maximo = (  from m in Contexto.Maraton
+                            where m.Fecha < DateTime.Now
+                            orderby m.Fecha descending
+                            select m.Fecha).FirstOrDefault();
 
             var posiciones = (from mu in Contexto.Maraton_Usuario
                               join u in Contexto.Usuario on mu.UsuarioID equals u.ID
@@ -161,7 +158,7 @@ namespace BaseDeDatos
                               select new
                               {
                                   Posicion = SqlFunctions.StringConvert((double)mu.Posicion) + " " + u.Nombre + " " + u.Apellido
-                              }).ToList();
+                              }).OrderBy(p =>p.Posicion).ToList();
 
             return posiciones;
         }
