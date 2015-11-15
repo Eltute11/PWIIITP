@@ -23,8 +23,12 @@ namespace Presentacion.GrupoUsuario
                 Usuario usuario = new Usuario();
                 usuario = (Usuario)Session["Usuario"];
 
-                gvUsuarioMaratonesPendientes.DataSource = maratonRepo.ObtenerPendientesUsuario(usuario);
-                gvUsuarioMaratonesPendientes.DataBind();
+            gvUsuarioMaratonesPendientes.DataSource = maratonRepo.ObtenerPendientesUsuario(usuario);
+            gvUsuarioMaratonesPendientes.DataBind();
+            
+            gvUsuarioMaratonesHistorial.DataSource = maratonRepo.ObtenerHistorialUsuario(usuario);
+            gvUsuarioMaratonesHistorial.DataBind();
+
             }
 
           
