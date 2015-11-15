@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="MaratonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MaratonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Maraton">
           <Key>
             <PropertyRef Name="ID" />
@@ -28,9 +28,9 @@
           <Property Name="MaratonID" Type="int" Nullable="false" />
           <Property Name="UsuarioID" Type="int" Nullable="false" />
           <Property Name="Lista_Espera" Type="bit" Nullable="false" />
-          <Property Name="Tiempo_Llegada" Type="datetime" />
-          <Property Name="Presente" Type="bit" Nullable="false" />
-          <Property Name="Abandono" Type="bit" Nullable="false" />
+          <Property Name="Presente" Type="bit" />
+          <Property Name="Abandono" Type="bit" />
+          <Property Name="Tiempo_Llegada" Type="time" Precision="2" />
           <Property Name="Posicion" Type="int" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -124,9 +124,9 @@
           <Property Name="MaratonID" Type="Int32" Nullable="false" />
           <Property Name="UsuarioID" Type="Int32" Nullable="false" />
           <Property Name="Lista_Espera" Type="Boolean" Nullable="false" />
-          <Property Name="Tiempo_Llegada" Type="DateTime" Precision="3" />
-          <Property Name="Presente" Type="Boolean" Nullable="false" />
-          <Property Name="Abandono" Type="Boolean" Nullable="false" />
+          <Property Name="Tiempo_Llegada" Type="Time" Precision="2" />
+          <Property Name="Presente" Type="Boolean" />
+          <Property Name="Abandono" Type="Boolean" />
           <NavigationProperty Name="Maraton" Relationship="MaratonModel.FK_Maraton_Usuario_Maraton" FromRole="Maraton_Usuario" ToRole="Maraton" />
           <NavigationProperty Name="Usuario" Relationship="MaratonModel.FK_Maraton_Usuario_Usuario" FromRole="Maraton_Usuario" ToRole="Usuario" />
           <Property Name="Posicion" Type="Int32" />

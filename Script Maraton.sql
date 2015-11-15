@@ -12,7 +12,10 @@ Luego hacer kill SPID (el numero) y ejecutar esa instruccion. Lo que hace es mat
 USE master
 GO
 
-DROP DATABASE Maraton
+IF EXISTS (SELECT 1 FROM master.dbo.sysdatabases WHERE name = 'Maraton')
+BEGIN 
+	DROP DATABASE Maraton
+END
 GO
 
 CREATE DATABASE Maraton
@@ -32,7 +35,7 @@ CREATE TABLE [dbo].[Maraton](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[Nombre] [varchar](25) NOT NULL,
 	[Cant_Participantes] [int] NOT NULL,
-	[Fecha] [date] NOT NULL,
+	[Fecha] [datetime] NOT NULL,
 	[Lugar_Salida] [varchar](50) NOT NULL,
 	[Cant_Lista_Espera] [int] NOT NULL,
 	[Premio_Uno] [decimal](18, 2) NOT NULL,
@@ -108,3 +111,5 @@ ALTER TABLE [dbo].[Maraton_Usuario] CHECK CONSTRAINT [FK_Maraton_Usuario_Usuario
 GO
 
 
+INSERT INTO Usuario (Nombre,Apellido,Clave,Email,Fecha_Nacimiento,Residencia,Administrador) 
+VALUES ('Administrador','Administrador',123,'admin@admin.com','19901010','Buenos Aires',1)
