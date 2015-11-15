@@ -87,42 +87,48 @@ namespace BaseDeDatos
 
         public  object ObtenerMaratonesPendientes()
         {
-            var maratonesPendientes = (from mu in Contexto.Maraton_Usuario
-                                       group new { mu.Maraton, mu } by new
-                                       {
-                                           ID = mu.Maraton.ID,
-                                           Nombre = mu.Maraton.Nombre,
-                                           Fecha = mu.Maraton.Fecha,
-                                           Km = mu.Maraton.Km,
-                                           Cant_Participantes = mu.Maraton.Cant_Participantes,
-                                           Premio_Uno = mu.Maraton.Premio_Uno,
-                                           Premio_Dos = mu.Maraton.Premio_Dos,
-                                           Premio_Tres = mu.Maraton.Premio_Tres,
-                                           
-                                       } into g
-                                       where g.Key.Fecha > DateTime.Now
+            var maratonesPendientes = (from m in Contexto.Maraton
+                                       where m.Fecha > DateTime.Now
+                                       join c in (
+                                                    from mu in Contexto.Maraton_Usuario
+                                                    group mu by new
+                                                        {
+                                                            mu.MaratonID
+                                                        } into g
+                                                    select new
+                                                    {
+                                                        g.Key.MaratonID,
+                                                        Cantidad = g.Count(p => p.MaratonID != 0)
+                                                    })
+                                       on m.ID equals c.MaratonID
+                                       join e in (
+                                                    from mu in Contexto.Maraton_Usuario
+                                                    where mu.Lista_Espera == true
+                                                    group mu by new
+                                                        {
+                                                            mu.MaratonID
+                                                        } into g
+                                                    select new
+                                                    {
+                                                        Espera = g.Count(p => p.Lista_Espera != false),
+                                                        g.Key.MaratonID
+                                                    }) 
+                                       on c.MaratonID equals e.MaratonID into e_join //LEFT JOIN
+                                       from e in e_join.DefaultIfEmpty()
                                        select new
                                        {
-                                           Nombre_de_Maraton = g.Key.Nombre,
-                                           Fecha = g.Key.Fecha,
-                                           Km = g.Key.Km,
-                                           Esperados = g.Key.Cant_Participantes,
-                                           Inscriptos = g.Count(p => p.mu.UsuarioID != null),
-                                           Espera =
-                                           (from mu2 in Contexto.Maraton_Usuario
-                                            where
-                                            g.Key.ID == mu2.MaratonID &&
-                                            mu2.Lista_Espera == true
-                                            select new
-                                            {
-                                                mu2.UsuarioID
-                                            }).Count(p => p.UsuarioID != null),
-                                           Premio_N1 = g.Key.Premio_Uno,
-                                           Premio_N2 = g.Key.Premio_Dos,
-                                           Premio_N3 = g.Key.Premio_Tres
-                                       });
+                                           Nombre_de_Maraton = m.Nombre,
+                                           m.Fecha,
+                                           m.Km,
+                                           Esperados = m.Cant_Participantes,
+                                           Inscriptos = c.Cantidad,
+                                           Espera = e.Espera != 0 && e.Espera != 1 ? 0 : 0,
+                                           Premio_N1 = m.Premio_Uno,
+                                           Premio_N2 = m.Premio_Dos,
+                                           Premio_N3 = m.Premio_Tres
+                                       }).ToList();
 
-            return maratonesPendientes.ToList();
+            return maratonesPendientes;
         }
         public object ObtenerRealizadasUsuario(int usuarioID)
         {
