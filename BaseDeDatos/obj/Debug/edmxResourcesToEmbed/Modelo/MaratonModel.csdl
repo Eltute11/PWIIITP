@@ -37,7 +37,7 @@
     <Property Name="MaratonID" Type="Int32" Nullable="false" />
     <Property Name="UsuarioID" Type="Int32" Nullable="false" />
     <Property Name="Lista_Espera" Type="Boolean" Nullable="false" />
-    <Property Name="Tiempo_Llegada" Type="DateTime" Precision="3" />
+    <Property Name="Tiempo_Llegada" Type="Time" Precision="2" />
     <Property Name="Presente" Type="Boolean" Nullable="false" />
     <Property Name="Abandono" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="Maraton" Relationship="MaratonModel.FK_Maraton_Usuario_Maraton" FromRole="Maraton_Usuario" ToRole="Maraton" />
