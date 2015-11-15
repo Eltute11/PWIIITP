@@ -13,7 +13,13 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                var maratonRepo = new MaratonRepositorio();
 
+                gvPosiciones.DataSource = maratonRepo.ObtenerPosiciones();
+                gvPosiciones.DataBind();
+            }
         }
                 
         protected void btnRegistrar_Click(object sender, EventArgs e)

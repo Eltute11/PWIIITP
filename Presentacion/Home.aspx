@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="ContentBody" ContentPlaceHolderID="cphPublicoBody" runat="server">
-
+    <form ID="home" runat="server">
     <!--<div class="container">-->
         <div class="row">
             <div class="col-lg-12">
@@ -19,48 +19,11 @@
 
             <div class="col-lg-6" > <!-- col-lg-offset-1 -->
                 <div class="bs-component">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <span class="badge">1</span>
-                            Diego Trefiletti
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">2</span>
-                            Dapibus ac facilisis in
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">3</span>
-                            Morbi leo risus
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">4</span>
-                            Cras justo odio
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">5</span>
-                            Dapibus ac facilisis in
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">6</span>
-                            Morbi leo risus
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">7</span>
-                            Morbi leo risus
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">8</span>
-                            Cras justo odio
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">9</span>
-                            Dapibus ac facilisis in
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">10</span>
-                            Morbi leo risus
-                        </li>
-                    </ul>
+                    <asp:GridView ID="gvPosiciones" runat="server" AutoGenerateColumns="False" GridLines="None" AllowPaging="true" CssClass="list-group" RowStyle-CssClass="list-group-item" HeaderStyle-CssClass="list-group-item" Width="100%">
+                        <Columns>
+                            <asp:BoundField DataField="Posicion" HeaderText="Posiciones de Ultima Maraton" ReadOnly="True" SortExpression="Posicion" />
+                        </Columns>
+                    </asp:GridView>
                 </div>
             </div>
 
@@ -68,7 +31,7 @@
 
             <div class="col-lg-6" > <!-- col-lg-offset-1 -->
                 <div class="well bs-component">
-                    <form class="form-horizontal" runat="server">
+                    <div class="form-horizontal">
                         <fieldset>
                             <legend>Soy nuevo</legend>
                             <div class="form-group">
@@ -127,8 +90,9 @@
                                 </div>
                             </div>
                         </fieldset>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
+    </form>
 </asp:Content>

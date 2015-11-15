@@ -13,7 +13,25 @@ namespace Presentacion {
     public partial class Home {
         
         /// <summary>
-        /// Control txtNombre.
+        /// home control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm home;
+        
+        /// <summary>
+        /// gvPosiciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvPosiciones;
+        
+        /// <summary>
+        /// txtNombre control.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
