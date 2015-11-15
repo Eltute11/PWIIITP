@@ -76,12 +76,12 @@
                                 <div class="col-lg-4">
                                     <asp:TextBox ID="txtNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="revNombre" runat="server" ErrorMessage="Solo letras" ValidationExpression="^[A-Za-z]*$" ControlToValidate="txtNombre" Display="Dynamic"></asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="revNombre" runat="server" ErrorMessage="Solo letras" ValidationExpression="^[A-Z a-z]*$" ControlToValidate="txtNombre" Display="Dynamic"></asp:RegularExpressionValidator>
                                 </div>
                                 <div class="col-lg-6">
                                     <asp:TextBox ID="txtApellido" class="form-control" placeholder="Apellido" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtApellido"></asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="revApellido" runat="server" ErrorMessage="Solo letras" ValidationExpression="^[A-Za-z]*$" ControlToValidate="txtApellido" Display="Dynamic"></asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="revApellido" runat="server" ErrorMessage="Solo letras" ValidationExpression="^[A-Z a-z]*$" ControlToValidate="txtApellido" Display="Dynamic"></asp:RegularExpressionValidator>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -95,8 +95,9 @@
                             <div class="form-group">
                                 <label for="txtFechaNacimiento" class="col-lg-2 control-label">Naci el</label>
                                 <div class="col-lg-6">
-                                    <asp:TextBox class="form-control" ID="txtFechaNacimiento" placeholder="Fecha Nacimiento" runat="server"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="rfvNacimiento" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaNacimiento"></asp:RequiredFieldValidator>
+                                    <asp:TextBox class="form-control" ID="txtFechaNacimiento" placeholder="Fecha Nacimiento" runat="server" MaxLength="10"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvNacimiento" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaNacimiento" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="revFechaNacimiento" runat="server" ErrorMessage="Fecha o formato invalido (dd/mm/aaaa)" ValidationExpression="(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\d\d" ControlToValidate="txtFechaNacimiento" Display="Dynamic"></asp:RegularExpressionValidator>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -104,7 +105,7 @@
                                 <div class="col-lg-10">
                                     <asp:TextBox ID="txtResidencia" class="form-control" placeholder="Residencia" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvResidencia" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtResidencia"></asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="revResidencia" runat="server" ErrorMessage="Solo letras" ValidationExpression="^[A-Za-z]*$" ControlToValidate="txtResidencia" Display="Dynamic"></asp:RegularExpressionValidator>
+                                    <asp:RegularExpressionValidator ID="revResidencia" runat="server" ErrorMessage="Solo letras" ValidationExpression="^[A-Z a-z]*$" ControlToValidate="txtResidencia" Display="Dynamic"></asp:RegularExpressionValidator>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -130,12 +131,4 @@
                 </div>
             </div>
         </div>
-    <!--</div>-->
-
-  <%--  <script type="text/javascript">
-        /* <![CDATA[ */
-        (function () { try { var s, a, i, j, r, c, l = document.getElementsByTagName("a"), t = document.createElement("textarea"); for (i = 0; l.length - i; i++) { try { a = l[i].getAttribute("href"); if (a && a.indexOf("/cdn-cgi/l/email-protection") > -1 && (a.length > 28)) { s = ''; j = 27 + 1 + a.indexOf("/cdn-cgi/l/email-protection"); if (a.length > j) { r = parseInt(a.substr(j, 2), 16); for (j += 2; a.length > j && a.substr(j, 1) != 'X'; j += 2) { c = parseInt(a.substr(j, 2), 16) ^ r; s += String.fromCharCode(c); } j += 1; s += a.substr(j, a.length - j); } t.innerHTML = s.replace(/</g, "&lt;").replace(/>/g, "&gt;"); l[i].setAttribute("href", "mailto:" + t.value); } } catch (e) { } } } catch (e) { } })();
-        /* ]]> */
-    </script>--%>
-
 </asp:Content>

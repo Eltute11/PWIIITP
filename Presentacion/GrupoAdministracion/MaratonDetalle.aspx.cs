@@ -33,8 +33,8 @@ namespace Presentacion.GrupoAdministracion
             maraton.Km = Convert.ToInt32(txtKm.Text);
 
             if (maratonRepo.Crear(maraton) > 0)
-                lblMensaje.Text = "Maraton creada.";
-            
+                lblMensaje.Text = "Maraton " + txtNombre.Text + " creada exitosamente.";
+
             else
                 lblMensaje.Text = "No se pudo crear la Maraton";
         }

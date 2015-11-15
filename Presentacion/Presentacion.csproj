@@ -79,7 +79,9 @@
     <Content Include="Js\Bootswatch\lumen.js" />
     <Content Include="Js\custom.js" />
     <Content Include="Js\jquery-1.10.2.min.js" />
+    <Content Include="Js\jsTableRealizadasUsuario.js" />
     <Content Include="Login.aspx" />
+    <Content Include="Servicios\MaratonService.asmx" />
     <Content Include="UserControl\ucFooter.ascx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -176,6 +178,10 @@
       <DependentUpon>Publico.master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\MaratonService.asmx.cs">
+      <DependentUpon>MaratonService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControl\ucFooter.ascx.cs">
       <DependentUpon>ucFooter.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -202,6 +208,7 @@
       <Name>BaseDeDatos</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
