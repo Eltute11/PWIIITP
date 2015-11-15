@@ -12,7 +12,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
           <Property Name="Cant_Participantes" Type="int" Nullable="false" />
-          <Property Name="Fecha" Type="date" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
           <Property Name="Lugar_Salida" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Cant_Lista_Espera" Type="int" Nullable="false" />
           <Property Name="Premio_Uno" Type="decimal" Precision="18" Scale="2" Nullable="false" />
@@ -28,9 +28,9 @@
           <Property Name="MaratonID" Type="int" Nullable="false" />
           <Property Name="UsuarioID" Type="int" Nullable="false" />
           <Property Name="Lista_Espera" Type="bit" Nullable="false" />
+          <Property Name="Tiempo_Llegada" Type="time" Precision="2" />
           <Property Name="Presente" Type="bit" />
           <Property Name="Abandono" Type="bit" />
-          <Property Name="Tiempo_Llegada" Type="time" Precision="2" />
           <Property Name="Posicion" Type="int" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -113,7 +113,7 @@
           <Property Name="Premio_Dos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="Premio_Tres" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <NavigationProperty Name="Maraton_Usuario" Relationship="MaratonModel.FK_Maraton_Usuario_Maraton" FromRole="Maraton" ToRole="Maraton_Usuario" />
-          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="0" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
           <Property Name="Km" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
         </EntityType>
         <EntityType Name="Maraton_Usuario">

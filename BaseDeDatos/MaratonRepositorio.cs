@@ -123,12 +123,11 @@ namespace BaseDeDatos
 
             return maratonesPendientes.ToList();
         }
-
-        public object ObtenerHistorialUsuario(Usuario usuario)
+        public object ObtenerRealizadasUsuario(int usuarioID)
         {
             var usuarioHistorial = (from b in Contexto.Maraton_Usuario
                                     where
-                                      b.UsuarioID == usuario.ID
+                                      b.UsuarioID == usuarioID
                                       && b.Maraton.Fecha < DateTime.Now
                                     select new
                                     {
@@ -138,16 +137,22 @@ namespace BaseDeDatos
                                         b.Posicion,
                                         b.Abandono,
                                         b.Tiempo_Llegada,
-                                        Premio =    b.Posicion == 1 ? b.Maraton.Premio_Uno : 
-                                                    b.Posicion == 2 ? b.Maraton.Premio_Dos : 
+                                        Premio = b.Posicion == 1 ? b.Maraton.Premio_Uno :
+                                                    b.Posicion == 2 ? b.Maraton.Premio_Dos :
                                                     b.Posicion == 3 ? b.Maraton.Premio_Tres : 0
-                                    }).ToList();
-            return usuarioHistorial;
+                                    });
+             return usuarioHistorial.ToList();
         }
-
         public object ObtenerPosiciones()
         {
-            var maximo = Contexto.Maraton.Max(m => m.Fecha);
+            DateTime fecha = DateTime.Now;
+
+            var maximo = (from m in Contexto.Maraton
+                              where m.Fecha < fecha
+                              orderby m.Fecha descending
+                              select m.Fecha).FirstOrDefault();
+
+            //var maximo = Contexto.Maraton.Max(m => m.Fecha);
 
             var posiciones = (from mu in Contexto.Maraton_Usuario
                               join u in Contexto.Usuario on mu.UsuarioID equals u.ID

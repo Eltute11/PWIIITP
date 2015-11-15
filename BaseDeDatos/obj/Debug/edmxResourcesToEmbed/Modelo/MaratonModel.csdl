@@ -26,7 +26,7 @@
     <Property Name="Premio_Dos" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="Premio_Tres" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <NavigationProperty Name="Maraton_Usuario" Relationship="MaratonModel.FK_Maraton_Usuario_Maraton" FromRole="Maraton" ToRole="Maraton_Usuario" />
-    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="0" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" Precision="3" />
     <Property Name="Km" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
   </EntityType>
   <EntityType Name="Maraton_Usuario">
@@ -38,8 +38,8 @@
     <Property Name="UsuarioID" Type="Int32" Nullable="false" />
     <Property Name="Lista_Espera" Type="Boolean" Nullable="false" />
     <Property Name="Tiempo_Llegada" Type="Time" Precision="2" />
-    <Property Name="Presente" Type="Boolean" Nullable="false" />
-    <Property Name="Abandono" Type="Boolean" Nullable="false" />
+    <Property Name="Presente" Type="Boolean" />
+    <Property Name="Abandono" Type="Boolean" />
     <NavigationProperty Name="Maraton" Relationship="MaratonModel.FK_Maraton_Usuario_Maraton" FromRole="Maraton_Usuario" ToRole="Maraton" />
     <NavigationProperty Name="Usuario" Relationship="MaratonModel.FK_Maraton_Usuario_Usuario" FromRole="Maraton_Usuario" ToRole="Usuario" />
     <Property Name="Posicion" Type="Int32" />

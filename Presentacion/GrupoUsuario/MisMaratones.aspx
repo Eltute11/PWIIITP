@@ -35,23 +35,24 @@
                                     </Columns>
                                 </asp:GridView>
                             </div>
+                          </form>
                     </div>
-
-                    <div class="tab-pane fade" id="historial">
-                        <h4>Historial de Maratones corridas</h4>
-                         <asp:GridView ID="gvUsuarioMaratonesHistorial" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-hover" EmptyDataText="No has realizado ninguna maraton"> 
-                            <Columns>
-                                <asp:BoundField DataField="Nombre" HeaderText="Nombre de Maratón" SortExpression="Nombre" />
-                                <asp:BoundField DataField="Lugar_Salida" HeaderText="Lugar de Salida" SortExpression="Lugar_Salida" />
-                                <asp:CheckBoxField DataField="Presente" HeaderText="¿Me presenté?" SortExpression="Presente" />
-                                <asp:BoundField DataField="Posicion" HeaderText="Posición final" SortExpression="Posicion" />
-                                <asp:CheckBoxField DataField="Abandono" HeaderText="¿Abandoné?" SortExpression="Abandono" />
-                                <asp:BoundField DataField="Tiempo_Llegada" HeaderText="Tiempo" SortExpression="Tiempo_Llegada" />
-                                <asp:BoundField DataField="Premio" HeaderText="Premio" ReadOnly="True" SortExpression="Premio" />
-                            </Columns>
-                        </asp:GridView> 
-                        </form>
-                        <p>Si aun no retiraste tu premio por haber participado del podio, podes hacerlo en Carlos Arjona 154 1er piso, Capital Federal.</p>
+                       <div class="tab-pane fade" id="historial">
+                        <h4>Historial de Maratones corridas</h4>                        
+                            <table class="table table-striped table-hover" id="MaratonesRealizadasUsuario">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre de Marat&oacute;n</th>
+                                        <th>Lugar de Salida</th>
+                                        <th>Presente</th>
+                                        <th>Posici&oacute;n final</th>
+                                        <th>Abandono</th>
+                                        <th>Tiempo</th>
+                                        <th>Premio</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <p>Si aun no retiraste tu premio por haber participado del podio, podes hacerlo en Carlos Arjona 154 1er piso, Capital Federal.</p>
                     </div>
                 </div>
             </div>

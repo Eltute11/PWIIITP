@@ -20,7 +20,8 @@
                     
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="proxima">
-                        <h4>Maratones a correr</h4> 
+                        <h4>Maratones a correr</h4>
+                        
                         <asp:GridView ID="gvMaratonProximas" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-hover">
                             <Columns>
                                 <asp:BoundField DataField="Nombre_de_Maraton" HeaderText="Nombre de Maraton" SortExpression="NombredeMaraton" />

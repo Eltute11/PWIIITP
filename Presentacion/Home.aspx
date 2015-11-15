@@ -16,10 +16,9 @@
         <div class="row">
 
             <!-- Ultima Maraton (Resultados) -->
-
             <div class="col-lg-6" > <!-- col-lg-offset-1 -->
                 <div class="bs-component">
-                    <asp:GridView ID="gvPosiciones" runat="server" AutoGenerateColumns="False" GridLines="None" AllowPaging="true" CssClass="list-group" RowStyle-CssClass="list-group-item" HeaderStyle-CssClass="list-group-item" Width="100%">
+                    <asp:GridView ID="gvPosiciones" runat="server" AutoGenerateColumns="False" GridLines="None" AllowPaging="true" CssClass="list-group" RowStyle-CssClass="list-group-item" HeaderStyle-CssClass="list-group-item" Width="100%" EmptyDataText="No se realizaron maratones."> 
                         <Columns>
                             <asp:BoundField DataField="Posicion" HeaderText="Posiciones de Ultima Maraton" ReadOnly="True" SortExpression="Posicion" />
                         </Columns>
@@ -94,5 +93,5 @@
                 </div>
             </div>
         </div>
-    </form>
+</form>
 </asp:Content>
