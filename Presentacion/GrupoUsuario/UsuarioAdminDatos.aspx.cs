@@ -35,10 +35,15 @@ namespace Presentacion.GrupoUsuario
 
             usuarioRepo.ModificarDatosUsuario(usuarioID, txtNombre.Text, txtApellido.Text, txtFechaNacimiento.Text, txtResidencia.Text);
 
-
-
-
+            lblMensaje.Text = "Datos actualizados exitosamente";
 
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(@"\GrupoUsuario\MisMaratones.aspx", false);
+        }
+
+        
     }
 }

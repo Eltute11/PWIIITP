@@ -60,10 +60,16 @@ namespace Presentacion.GrupoUsuario
 
             
             maratonRepo.InscripcionMaraton(maraton_usuario);
-
+            Response.Redirect(@"\GrupoUsuario\UsuarioInscripcionMaratones.aspx", false);
             
 
         }
+       
+        protected void btnVolver_Click(object sender, EventArgs e)
+       {
+           Response.Redirect(@"\GrupoUsuario\MisMaratones.aspx", false);
+       }
+
     }
 
 }

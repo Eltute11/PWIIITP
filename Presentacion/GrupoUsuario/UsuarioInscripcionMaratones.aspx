@@ -18,9 +18,9 @@
                         </div>
                         <div class="panel-body">
                           
-                               <asp:GridView ID="gvUsuarioInscripcionMaratones" OnRowCommand="gvUsuarioInscripcionMaratones_RowCommand" AutoGenerateColumns="false" runat="server" CssClass="table table-striped table-hover" DataKeyNames="ID" EmptyDataText="No hay registros de datos para mostrar.">
+                               <asp:GridView ID="gvUsuarioInscripcionMaratones" OnRowCommand="gvUsuarioInscripcionMaratones_RowCommand" AutoGenerateColumns="false" runat="server" CssClass="table table-striped table-hover" DataKeyNames="ID" EmptyDataText="No hay maratones disponibles para su inscripción.">
                                 <Columns>
-                                    <asp:BoundField DataField="ID" HeaderText="ID Maraton" />
+                                    <asp:BoundField DataField="ID" HeaderText="Nro Maraton" />
                                     <asp:BoundField DataField="Nombre" HeaderText="Nombre de Maraton" />
                                     <asp:BoundField DataField="Fecha" HeaderText="Fecha y hora" />
                                     <asp:BoundField DataField="Lugar_Salida" HeaderText="Lugar de Salida" />
@@ -35,6 +35,12 @@
                         </div>
                     </div>
                 </fieldset>
+                <div>
+                    <asp:Button ID="btnVolver" class="btn btn-primary" runat="server" Text="Volver" OnClick="btnVolver_Click" />
+                    <br />
+                    <br />
+                </div>
+                
             </form>
         </div>
     </div>

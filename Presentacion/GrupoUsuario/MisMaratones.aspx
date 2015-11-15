@@ -21,7 +21,7 @@
                     <div class="tab-pane fade active in" id="proxima">
                         <h4>Maratones a correr</h4>
                         <p>No est&aacute;s inscripto en ninguna Marat&oacute;n. ¿Que esper&aacute;s? <a href="UsuarioInscripcionMaratones.aspx">¡Anotate!</a></p>
-                        <form id="form1" runat="server">
+                        <form id="form1" runat="server"> 
                             <div>
                             </div>
                             <div class="bs-component">
@@ -31,37 +31,34 @@
                                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
                                         <asp:BoundField DataField="Fecha" HeaderText="Fecha" SortExpression="Fecha" DataFormatString="{0:d}" />
                                         <asp:BoundField DataField="Km" HeaderText="Km" SortExpression="Km" />
-                                        <%--<asp:ButtonField Text="Anular Inscripcion" ButtonType="Button" ControlStyle-CssClass="btn btn-warning" />--%>
                                         <asp:ButtonField ButtonType="Button" CommandName="Anular" ControlStyle-CssClass="btn btn-warning" Text="Anular Inscripcion"/>
                                     </Columns>
                                 </asp:GridView>
                             </div>
+                          </form>
                     </div>
-
-                    <div class="tab-pane fade" id="historial">
-                        <h4>Historial de Maratones corridas</h4>
-                         <asp:GridView ID="gvUsuarioMaratonesHistorial" runat="server" AutoGenerateColumns="False" DataSourceID="sdsUsuarioMaratonesHistorial" CssClass="table table-striped table-hover" EmptyDataText="No has realizado ninguna maraton"> 
-                            <Columns>
-                                <asp:BoundField DataField="Nombre" HeaderText="Nombre de Maratón" SortExpression="Nombre" />
-                                <asp:BoundField DataField="Lugar_Salida" HeaderText="Lugar de Salida" SortExpression="Lugar_Salida" />
-                                <asp:CheckBoxField DataField="Presente" HeaderText="¿Me presenté?" SortExpression="Presente" />
-                                <asp:BoundField DataField="Posicion" HeaderText="Posición final" SortExpression="Posicion" />
-                                <asp:CheckBoxField DataField="Abandono" HeaderText="¿Abandoné?" SortExpression="Abandono" />
-                                <asp:BoundField DataField="Tiempo_Llegada" HeaderText="Tiempo" SortExpression="Tiempo_Llegada" />
-                                <asp:BoundField DataField="Premio" HeaderText="Premio" ReadOnly="True" SortExpression="Premio" />
-                            </Columns>
-                        </asp:GridView> 
-                        <asp:SqlDataSource ID="sdsUsuarioMaratonesHistorial" runat="server" ConnectionString="<%$ ConnectionStrings:MaratonConnectionString %>"></asp:SqlDataSource>
-                        <asp:EntityDataSource ID="EntityDataSource1" runat="server">
-                        </asp:EntityDataSource>
-                        
-                        </form>
-                        
-                        <p>Si aun no retiraste tu premio por haber participado del podio, podes hacerlo en Carlos Arjona 154 1er piso, Capital Federal.</p>
+                       <div class="tab-pane fade" id="historial">
+                        <h4>Historial de Maratones corridas</h4>                        
+                            <table class="table table-striped table-hover" id="MaratonesRealizadasUsuario">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre de Marat&oacute;n</th>
+                                        <th>Lugar de Salida</th>
+                                        <th>Presente</th>
+                                        <th>Posici&oacute;n final</th>
+                                        <th>Abandono</th>
+                                        <th>Tiempo</th>
+                                        <th>Premio</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <p>Si aun no retiraste tu premio por haber participado del podio, podes hacerlo en Carlos Arjona 154 1er piso, Capital Federal.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+    <script src="../Js/jsTableRealizadasUsuario.js"></script> <!-- Realizo aca la llamada al js ya que si lo ponia en la master entraba en todas las paginas -->
 
 </asp:Content>
