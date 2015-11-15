@@ -13,7 +13,16 @@ namespace Presentacion.GrupoAdministracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        }
-    }
+            if (!IsPostBack)
+            {
+                var maratonRepo = new MaratonRepositorio();
+
+                Usuario usuario = new Usuario();
+                usuario = (Usuario)Session["Usuario"];
+
+                gvMaratonProximas.DataSource = maratonRepo.ObtenerMaratonesPendientes();
+                gvMaratonProximas.DataBind();
+            }
+         }
+     }
 }
