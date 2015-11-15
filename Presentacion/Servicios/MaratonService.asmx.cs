@@ -34,7 +34,7 @@ public class MaratonService : System.Web.Services.WebService
             int usuarioID = usuario.ID;
             
 
-            object maratonesRealizadasUsuario = maratonRepo.ObtenerRealizadasUsuario(usuarioID);
+            object maratonesRealizadasUsuario = maratonRepo.ObtenerHistorialUsuario(usuario);
 
             IList mar = maratonesRealizadasUsuario as IList;
 
