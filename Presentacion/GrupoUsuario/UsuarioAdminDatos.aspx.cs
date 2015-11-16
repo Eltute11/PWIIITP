@@ -17,6 +17,14 @@ namespace Presentacion.GrupoUsuario
                 Usuario usuario = new Usuario(); // Lo obtengo de BaseDeDatos.Modelo.Usuario
                 usuario = (Usuario)Session["Usuario"];
 
+                if (usuario == null)
+                {
+                    HttpContext.Current.Session.Clear();
+                    HttpContext.Current.Session.Abandon();
+                    Response.Redirect(@"..\Login.aspx", false);
+                    return;
+                }
+
                 txtNombre.Text = usuario.Nombre;
                 txtApellido.Text = usuario.Apellido;
                 txtFechaNacimiento.Text = Convert.ToString(usuario.Fecha_Nacimiento).Substring(0, 10);  

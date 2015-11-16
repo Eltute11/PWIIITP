@@ -18,13 +18,22 @@ namespace Presentacion.GrupoUsuario
 
             if (!IsPostBack) 
             { 
-                var maratonRepo = new MaratonRepositorio();
-
                 Usuario usuario = new Usuario();
                 usuario = (Usuario)Session["Usuario"];
 
+                if (usuario == null)
+                {
+                    HttpContext.Current.Session.Clear();
+                    HttpContext.Current.Session.Abandon();
+                    Response.Redirect(@"..\Login.aspx", false);
+                    return;
+                }
+
+                var maratonRepo = new MaratonRepositorio();
+
                 gvUsuarioMaratonesPendientes.DataSource = maratonRepo.ObtenerPendientesUsuario(usuario);
                 gvUsuarioMaratonesPendientes.DataBind();
+                
             }
 
           

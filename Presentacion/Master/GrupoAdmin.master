@@ -38,7 +38,7 @@
                             <img src="../Img/Config.png" /><span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="download">
-                            <li><a href="../Home.aspx">Cerrar Sesi&oacute;n</a></li>
+                            <li><a href="../Login.aspx">Cerrar Sesi&oacute;n</a></li>
                         </ul>
                     </li>
                 </ul>

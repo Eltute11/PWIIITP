@@ -13,7 +13,19 @@ namespace Presentacion.GrupoAdministracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                Usuario usuario = new Usuario(); // Lo obtengo de BaseDeDatos.Modelo.Usuario
+                usuario = (Usuario)Session["Usuario"];
 
+                if (usuario == null || usuario.Administrador != true)
+                {
+                    HttpContext.Current.Session.Clear();
+                    HttpContext.Current.Session.Abandon();
+                    Response.Redirect(@"..\Login.aspx", false);
+                    return;
+                }
+            }
         }
 
         protected void btnCrear_Click(object sender, EventArgs e)

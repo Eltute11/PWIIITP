@@ -12,7 +12,11 @@ namespace Presentacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                HttpContext.Current.Session.Clear();
+                HttpContext.Current.Session.Abandon();
+            }
         }
 
         protected void btnIngresar_Click(object sender, EventArgs e)
@@ -28,8 +32,11 @@ namespace Presentacion
             
 
             if (usuario != null)
-            {
-                Session["Usuario"] = usuario;
+            {   
+                // IDEM
+                //Session["Usuario"] = usuario; 
+
+                HttpContext.Current.Session.Add("Usuario", usuario);
 
                 if (usuario.Administrador)
                 {
@@ -39,6 +46,8 @@ namespace Presentacion
                 {
                     Response.Redirect(@"\GrupoUsuario\MisMaratones.aspx", false);
                 }
+
+                
             }
             else
             {

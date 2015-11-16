@@ -19,7 +19,15 @@ namespace Presentacion.GrupoAdministracion
 
                 Usuario usuario = new Usuario();
                 usuario = (Usuario)Session["Usuario"];
-
+                
+                if (usuario == null || usuario.Administrador != true)
+                {
+                    HttpContext.Current.Session.Clear();
+                    HttpContext.Current.Session.Abandon();
+                    Response.Redirect(@"..\Login.aspx", false);
+                    return;
+                }
+                
                 gvMaratonProximas.DataSource = maratonRepo.ObtenerMaratonesPendientes();
                 gvMaratonProximas.DataBind();
             }

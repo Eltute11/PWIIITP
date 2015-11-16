@@ -19,6 +19,14 @@ namespace Presentacion.GrupoUsuario
                 Usuario usuario = new Usuario();
                 usuario = (Usuario)Session["Usuario"];
 
+                if (usuario == null)
+                {
+                    HttpContext.Current.Session.Clear();
+                    HttpContext.Current.Session.Abandon();
+                    Response.Redirect(@"..\Login.aspx", false);
+                    return;
+                }
+
                 gvUsuarioInscripcionMaratones.DataSource = maratonRepo.ObtenerMaratonesInscripcion(usuario.ID);
                 gvUsuarioInscripcionMaratones.DataBind();
             }

@@ -40,7 +40,7 @@
                         <ul class="dropdown-menu" aria-labelledby="download">
                             <li><a href="./UsuarioAdminDatos.aspx">Mis Datos</a></li>
                             <li class="divider"></li>
-                            <li><a href="../Home.aspx">Cerrar Sesi&oacute;n</a></li>
+                            <li><a href="../Login.aspx">Cerrar Sesi&oacute;n</a></li>
                         </ul>
                     </li>
                 </ul>
