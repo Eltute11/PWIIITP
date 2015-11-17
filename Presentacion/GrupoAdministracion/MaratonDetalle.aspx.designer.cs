@@ -49,6 +49,24 @@ namespace Presentacion.GrupoAdministracion {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revFechaSalida;
         
         /// <summary>
+        /// Control cvFecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator cvFecha;
+        
+        /// <summary>
+        /// Control fechaActual.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField fechaActual;
+        
+        /// <summary>
         /// Control rfvFechaSalida.
         /// </summary>
         /// <remarks>

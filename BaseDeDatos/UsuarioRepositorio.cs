@@ -33,6 +33,14 @@ namespace BaseDeDatos
             return _usuario;
         }
 
+        public string Obtener(int UsuarioID)
+        {
+            var _usuario = (from a in Contexto.Usuario
+                            where a.ID == UsuarioID
+                            select a.Nombre).FirstOrDefault();
+
+            return _usuario;
+        }
         public void ModificarDatosUsuario (int usuarioID, string Nombre, string Apellido, string Fecha_Nacimiento, string Residencia) 
         {
             var _usuario = (from a in Contexto.Usuario

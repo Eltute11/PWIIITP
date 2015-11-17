@@ -8,6 +8,7 @@ using BaseDeDatos.Modelo;
 using System.Data.Objects;
 using System.Collections;
 using System.Data.Objects.SqlClient;
+using System.Data.SqlClient;
 
 namespace BaseDeDatos
 {
@@ -37,6 +38,14 @@ namespace BaseDeDatos
             return _maratones;
         }
 
+		public List<Maraton> ObtenerRealizadas()
+        {
+            return (from maraton in Contexto.Maraton
+                    where maraton.Fecha < DateTime.Now
+                    select maraton)
+                        .OrderBy(maraton => maraton.Fecha).ToList();
+        }
+
         public List<Maraton> ObtenerPendientesUsuario(Usuario usu)
         {
             return (from m in Contexto.Maraton
@@ -45,7 +54,16 @@ namespace BaseDeDatos
                        && mu.Tiempo_Llegada == null
                     select m).ToList();
         }
+	
+	 public string obtenerNombre(int maratonID)
+        {
+            var _maratones = (from m in Contexto.Maraton
+                              where m.ID == maratonID
+                              select m).FirstOrDefault(); ;
 
+            return (_maratones.Nombre == null ? "" : _maratones.Nombre);
+        }
+	
         public void AnularInscripcionUsuario(int usu, int mar)
         {
             var anularMaraton = (from mu in Contexto.Maraton_Usuario
@@ -62,7 +80,42 @@ namespace BaseDeDatos
             Contexto.SaveChanges();
 
         }
+		
+		 public object ObtenerParticipantes(int maratonID)
+        {
+             var userMaraton =
+                      (from u in Contexto.Usuario
+                      join mu in Contexto.Maraton_Usuario
+                      on u.ID equals mu.UsuarioID
+                      where mu.MaratonID == maratonID 
+                      orderby mu.Posicion
+                      select new { u.ID, u.Nombre, mu.MaratonID, mu.Presente, mu.Abandono, mu.Tiempo_Llegada, mu.Posicion }).ToList();
 
+             return userMaraton;
+        }
+
+        public void Actualizar(Maraton_Usuario resultado)
+        { 
+            Maraton_Usuario participante = (from mu in Contexto.Maraton_Usuario 
+                                            where mu.UsuarioID == resultado.UsuarioID && mu.MaratonID == resultado.MaratonID
+                                            select mu).First();
+
+            participante.Abandono = resultado.Abandono;
+            participante.Presente = resultado.Presente;
+            participante.Tiempo_Llegada = resultado.Tiempo_Llegada;
+
+            var posicion = (from mu in Contexto.Maraton_Usuario
+                            where mu.MaratonID == resultado.MaratonID && mu.Tiempo_Llegada > resultado.Tiempo_Llegada && mu.UsuarioID != resultado.UsuarioID
+                            orderby mu.Tiempo_Llegada
+                            select mu).Count();
+
+            participante.Posicion = (posicion + 1);
+
+            Contexto.SaveChanges();
+            
+        }
+
+		
         public List<Maraton> ObtenerMaratonesInscripcion(int usuarioID)
         {
 
@@ -100,7 +153,8 @@ namespace BaseDeDatos
                                                         g.Key.MaratonID,
                                                         Cantidad = g.Count(p => p.MaratonID != 0)
                                                     })
-                                       on m.ID equals c.MaratonID
+                                       on m.ID equals c.MaratonID into c_join
+                                       from c in c_join.DefaultIfEmpty()
                                        join e in (
                                                     from mu in Contexto.Maraton_Usuario
                                                     where mu.Lista_Espera == true
@@ -121,7 +175,7 @@ namespace BaseDeDatos
                                            m.Fecha,
                                            m.Km,
                                            Esperados = m.Cant_Participantes,
-                                           Inscriptos = c.Cantidad,
+                                           Inscriptos = c.Cantidad == null ? 0 : 0,
                                            Espera = e.Espera != 0 && e.Espera != 1 ? 0 : 0,
                                            Premio_N1 = m.Premio_Uno,
                                            Premio_N2 = m.Premio_Dos,
@@ -163,10 +217,19 @@ namespace BaseDeDatos
                               where maximo.Equals(m.Fecha)
                               select new
                               {
-                                  Posicion = SqlFunctions.StringConvert((double)mu.Posicion) + " " + u.Nombre + " " + u.Apellido
+                                  Posicion = SqlFunctions.StringConvert((double)mu.Posicion) + " " + u.Nombre + " " + u.Apellido 
                               }).OrderBy(p =>p.Posicion).ToList();
 
             return posiciones;
+        }
+		
+	  public Maraton_Usuario ObtenerResultado(int MaratonID, int UsuarioID)
+        {
+            Maraton_Usuario participante = (from mu in Contexto.Maraton_Usuario
+                                            where mu.UsuarioID == UsuarioID && mu.MaratonID == MaratonID
+                                            select mu).First();
+
+            return participante;
         }
     }
 }

@@ -12,8 +12,8 @@ namespace Presentacion.GrupoAdministracion
     public partial class MaratonDetalle : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            if (!IsPostBack)
+        {   
+        if (!IsPostBack)
             {
                 Usuario usuario = new Usuario(); // Lo obtengo de BaseDeDatos.Modelo.Usuario
                 usuario = (Usuario)Session["Usuario"];
@@ -30,6 +30,12 @@ namespace Presentacion.GrupoAdministracion
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
+            //lblValFecha.Text = "";
+            //if (DateTime.Parse(txtFechaSalida.Text) < DateTime.Now)
+            //{
+            //    lblValFecha.Text = "La fecha ingresada es menora la actual";
+            //    SetFocus(txtFechaSalida);
+            //}
             var maratonRepo = new MaratonRepositorio();
 
             var maraton = new Maraton();

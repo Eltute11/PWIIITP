@@ -30,6 +30,9 @@ namespace Presentacion.GrupoAdministracion
                 
                 gvMaratonProximas.DataSource = maratonRepo.ObtenerMaratonesPendientes();
                 gvMaratonProximas.DataBind();
+
+                GridRealizadas.DataSource = maratonRepo.ObtenerRealizadas();
+                GridRealizadas.DataBind();
             }
          }
      }

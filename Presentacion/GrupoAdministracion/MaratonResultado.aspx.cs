@@ -26,11 +26,30 @@ namespace Presentacion.GrupoAdministracion
                     return;
                 }
             }
+			
+			if (Request.QueryString["ID"].ToString() != null)
+                {
+                    int maratonID = Convert.ToInt32(Request.QueryString["ID"]);
+
+                    var maratonRepo = new MaratonRepositorio();
+
+                    string nombre = maratonRepo.obtenerNombre(maratonID);
+
+                    if (nombre != "")
+                    {
+                        lblMaratonNombre.Text = nombre;
+                        cargarParticipantes(maratonID);
+                    }
+                }
         }
 
-         protected void btnGuardar_Click(object sender, EventArgs e)
+       
+        private void cargarParticipantes(int maratonID)
         {
-        
+            var maratonRepo = new MaratonRepositorio();
+
+            gvResultados.DataSource = maratonRepo.ObtenerParticipantes(maratonID);
+            gvResultados.DataBind();               
         }
 
         

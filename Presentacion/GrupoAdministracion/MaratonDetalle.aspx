@@ -27,8 +27,8 @@
                                 <div class="col-lg-3">
                                     <asp:TextBox ID="txtFechaSalida" class="form-control" placeholder="dd/mm/aaaa hh:mm:ss" runat="server"></asp:TextBox>
                                     <asp:RegularExpressionValidator ID="revFechaSalida" runat="server" ErrorMessage="Formato invalido (dd/mm/aaaa hh:mm:ss)"  ValidationExpression="[0-3][0-9]\/[0-1][0-9]\/[0-9]{4} [0-2][0-9]:[0-5][0-9]:[0-5][0-9]" ControlToValidate="txtFechaSalida" Display="Dynamic"></asp:RegularExpressionValidator>
+                                    <%--<asp:Label ID="lblValFecha" runat="server" Text=""></asp:Label>--%>
                                     
-
                                     <asp:RequiredFieldValidator ID="rfvFechaSalida" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtFechaSalida" Display="Dynamic"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -55,6 +55,7 @@
                                     <asp:TextBox ID="txtSalida" placeholder="Lugar de salida" class="form-control" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvSalida" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtSalida" Display="Dynamic"></asp:RequiredFieldValidator>
                                     <asp:RegularExpressionValidator ID="revSalida" runat="server" ErrorMessage="Solo letras" ValidationExpression ="^[A-Z a-z]*$" ControlToValidate="txtSalida" Display="Dynamic"></asp:RegularExpressionValidator>
+                                    
                                 </div>
                             </div>
                             <div class="form-group">

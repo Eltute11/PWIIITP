@@ -39,66 +39,22 @@
 
                     <div class="tab-pane fade" id="historial">
                         <h4>Historial de Maratones corridas</h4>                        
-                        <table class="table table-striped table-hover ">
-                            <thead>
-                                <tr>
-                                    <th>Nombre de Maratón</th>
-                                    <th>Fecha</th>
-                                    <th>Km</th>
-                                    <th>#Esperada</th>
-                                    <th>#Inscriptos</th>
-                                    <th>#En Espera</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
-                                </tr>
-                                <tr>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td><a href="MaratonResultado.aspx"><buttom class="btn btn-warning">Resultados</buttom></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                        <asp:GridView ID="GridRealizadas" AutoGenerateColumns="False" runat="server" CssClass="table table-striped table-hover" >
+                            <Columns>
+                                <asp:BoundField DataField="Nombre" HeaderText="Nombre de Maratón" />
+                                <asp:BoundField DataField="Cant_Participantes" HeaderText="#Participantes" />
+                                <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
+                                <asp:BoundField DataField="Lugar_Salida" HeaderText="Lugar de Salida" />
+                                <asp:BoundField DataField="Cant_Lista_Espera" HeaderText="#Lista de Espera" />
+                                <asp:BoundField DataField="Premio_Uno" HeaderText="1er Premio" />
+                                <asp:BoundField DataField="Premio_Dos" HeaderText="2do Premio" />
+                                <asp:BoundField DataField="Premio_Tres" HeaderText="3er Premio" />
+                                <asp:BoundField DataField="KM" HeaderText="Kilometros" />
+                                <asp:BoundField DataField="ID" HeaderText="ID" Visible="False"/>
+                                <asp:HyperLinkField HeaderText="Resultados" DataNavigateUrlFields="ID" DataNavigateUrlFormatString="MaratonResultado.aspx?id={0}" Text="Resultados" ControlStyle-CssClass="btn btn-warning" />
+                            </Columns>
+                        </asp:GridView>
                     </div>
                 </div>
             </div>
