@@ -18,6 +18,7 @@ namespace Presentacion
                 var maratonRepo = new MaratonRepositorio();
 
                 gvPosiciones.DataSource = maratonRepo.ObtenerPosiciones();
+                lblNombreMaraton.Text = maratonRepo.obtenerNombreUltimaMaraton();
                 gvPosiciones.DataBind();
             }
         }
@@ -36,8 +37,16 @@ namespace Presentacion
             usuario.Administrador = false;
             usuario.Email = txtEmail.Text;
 
-            if (usuarioRepo.Crear(usuario) > 0)
+            if (usuarioRepo.Crear(usuario) > 0) {
                 lblMensaje.Text = "Usuario creado.";
+                txtNombre.Text = "";
+                txtApellido.Text = "";
+                txtEmail.Text = "";
+                txtFechaNacimiento.Text = "";
+                txtResidencia.Text = "";
+                txtClave.Text = "";
+                txtClaveRepetir.Text = "";
+            }
             else
                 lblMensaje.Text = "No se pudo crear el Usuario";
         }

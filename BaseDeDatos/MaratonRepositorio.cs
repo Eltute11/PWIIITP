@@ -42,8 +42,8 @@ namespace BaseDeDatos
         {
             return (from maraton in Contexto.Maraton
                     where maraton.Fecha < DateTime.Now
-                    select maraton)
-                        .OrderBy(maraton => maraton.Fecha).ToList();
+                    orderby maraton.Fecha descending
+                    select maraton).ToList();
         }
 
         public List<Maraton> ObtenerPendientesUsuario(Usuario usu)
@@ -89,7 +89,7 @@ namespace BaseDeDatos
                       on u.ID equals mu.UsuarioID
                       where mu.MaratonID == maratonID 
                       orderby mu.Posicion
-                      select new { u.ID, u.Nombre, mu.MaratonID, mu.Presente, mu.Abandono, mu.Tiempo_Llegada, mu.Posicion }).ToList();
+                      select new {  Nombre = u.Nombre + " " + u.Apellido , u.ID, mu.MaratonID, mu.Presente, mu.Abandono, mu.Tiempo_Llegada, mu.Posicion }).ToList();
 
              return userMaraton;
         }
@@ -105,11 +105,13 @@ namespace BaseDeDatos
             participante.Tiempo_Llegada = resultado.Tiempo_Llegada;
 
             var posicion = (from mu in Contexto.Maraton_Usuario
-                            where mu.MaratonID == resultado.MaratonID && mu.Tiempo_Llegada > resultado.Tiempo_Llegada && mu.UsuarioID != resultado.UsuarioID
-                            orderby mu.Tiempo_Llegada
+                            where mu.MaratonID == resultado.MaratonID 
+                               && mu.Tiempo_Llegada != null
                             select mu).Count();
 
-            participante.Posicion = (posicion + 1);
+            if (participante.Posicion == null) { 
+                participante.Posicion = (posicion + 1);
+            }
 
             Contexto.SaveChanges();
             
@@ -204,23 +206,84 @@ namespace BaseDeDatos
                                     });
              return usuarioHistorial.ToList();
         }
-        public object ObtenerPosiciones()
+        public List<UltimaMaraton> ObtenerPosiciones()
         {
-            var maximo = (  from m in Contexto.Maraton
-                            where m.Fecha < DateTime.Now
-                            orderby m.Fecha descending
-                            select m.Fecha).FirstOrDefault();
-
+            int idUltimaMaraton = ObtenrUltimaMaratonRealizada();
+            
             var posiciones = (from mu in Contexto.Maraton_Usuario
                               join u in Contexto.Usuario on mu.UsuarioID equals u.ID
                               join m in Contexto.Maraton on mu.MaratonID equals m.ID
-                              where maximo.Equals(m.Fecha)
-                              select new
+                              where mu.MaratonID == idUltimaMaraton
+                                 && mu.Tiempo_Llegada != null
+                              select new UltimaMaraton ()
                               {
-                                  Posicion = SqlFunctions.StringConvert((double)mu.Posicion) + " " + u.Nombre + " " + u.Apellido 
-                              }).OrderBy(p =>p.Posicion).ToList();
+                                 Posicion = mu.Posicion,
+                                 Nombre = u.Nombre,
+                                 Apellido = u.Apellido,
+                                 Tiempo_Llegada = mu.Tiempo_Llegada
+
+                              }).OrderBy(p => p.Posicion).ToList();
+                              
 
             return posiciones;
+        }
+
+        public int ObtenrUltimaMaratonRealizada () 
+        {
+            // OBTENGO TODAS LAS MARATONES CON FECHA ANTERIOR A LA ACTUAL
+            //int idUltima = 0;
+
+            List<Maraton> lstMaraton = (from m in Contexto.Maraton
+                                        //join mu in Contexto.Maraton_Usuario  on m.ID equals mu.MaratonID
+                                        where m.Fecha < DateTime.Now
+                                        select m).ToList();
+
+            int flag = 0;
+
+            Maraton maratonAUX = new Maraton();
+
+
+            foreach (Maraton maraton in lstMaraton) //RECORRO TODAS LAS MARATONES
+            {
+                if (flag == 0) // GUARDO LA PRIMER MARATON EN MARATONAUX
+                {
+                    maratonAUX = maraton;
+                    flag = 1;
+                }
+                else
+                {
+                    if (maraton.Fecha > maratonAUX.Fecha) // SI LA FECHA DE LA MARATON ACTUAL DEL FOREACH ES MAYOR A LA FECHA DE MARATONAUX, PISO MARATONAUX.
+                    { 
+                        maratonAUX = maraton;
+                    }
+                    else if (maraton.Fecha == maratonAUX.Fecha) // // SI LA FECHA DE LA MARATON ACTUAL DEL FOREACH ES IGUAL A LA FECHA DE MARATONAUX,  OBTENGO LA CANTIDAD DE INSCRIPTOS DE CADA UNA 
+                    {
+
+                        int maxMaratonActual = (from mu in Contexto.Maraton_Usuario
+                                                   where mu.MaratonID == maraton.ID
+                                                   select mu).Count();
+
+                        int maxMaratonAux = (from mu in Contexto.Maraton_Usuario
+                                                   where mu.MaratonID == maratonAUX.ID
+                                                   select mu).Count();
+
+
+
+
+                        if (maxMaratonActual > maxMaratonAux)
+                        //SI LA CANTIDAD DE LA ACTUAL ES MAYOR A LA DE LA maratonAUX, PISO maratonAUX Con la acutal ACTUAL 
+                        {
+                            maratonAUX = maraton;
+                        }
+
+                    } 
+                }
+                
+
+            }
+
+
+            return maratonAUX.ID;
         }
 		
 	  public Maraton_Usuario ObtenerResultado(int MaratonID, int UsuarioID)
@@ -231,5 +294,21 @@ namespace BaseDeDatos
 
             return participante;
         }
+
+
+      public string obtenerNombreUltimaMaraton()
+      {
+
+          int idUltimaMaraton = ObtenrUltimaMaratonRealizada();
+
+          string ultimaMaraton = (from m in Contexto.Maraton
+                                  where m.ID == idUltimaMaraton
+                                  select m.Nombre).First();
+
+          return ultimaMaraton;
+
+      }
     }
+
+   
 }

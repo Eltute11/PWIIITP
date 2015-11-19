@@ -50,9 +50,18 @@ namespace Presentacion.GrupoAdministracion
             maraton.Fecha = Convert.ToDateTime(txtFechaSalida.Text);
             maraton.Km = Convert.ToInt32(txtKm.Text);
 
-            if (maratonRepo.Crear(maraton) > 0)
+            if (maratonRepo.Crear(maraton) > 0) {
                 lblMensaje.Text = "Maraton " + txtNombre.Text + " creada exitosamente.";
-
+                txtNombre.Text = "";
+                txtFechaSalida.Text = "";
+                txtKm.Text = "";
+                txtCantidad.Text = "";
+                txtSalida.Text = "";
+                txtEspera.Text = "";
+                txtPremio1.Text = "";
+                txtPremio2.Text = "";
+                txtPremio3.Text = "";
+            }
             else
                 lblMensaje.Text = "No se pudo crear la Maraton";
         }

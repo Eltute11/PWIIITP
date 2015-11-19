@@ -9,7 +9,7 @@
     <!--<div class="container">-->
         <div class="row">
             <div class="col-lg-12">
-                <h2 id="H1">&Uacute;ltima Marat&oacute;n</h2>
+                <h2 id="H1">&Uacute;ltima Marat&oacute;n</h2><h4><asp:Label ID="lblNombreMaraton" runat="server" Text=""></asp:Label></h4>
             </div>
         </div>
 
@@ -18,9 +18,13 @@
             <!-- Ultima Maraton (Resultados) -->
             <div class="col-lg-6" > <!-- col-lg-offset-1 -->
                 <div class="bs-component">
-                    <asp:GridView ID="gvPosiciones" runat="server" AutoGenerateColumns="False" GridLines="None" AllowPaging="true" CssClass="list-group" RowStyle-CssClass="list-group-item" HeaderStyle-CssClass="list-group-item" Width="100%" EmptyDataText="Todavia no estan disponibles los resultados."> 
+                    <%--<asp:GridView ID="gvPosiciones" runat="server" AutoGenerateColumns="False" GridLines="None" AllowPaging="true" CssClass="list-group" RowStyle-CssClass="list-group-item" HeaderStyle-CssClass="list-group-item" Width="100%" EmptyDataText="Todavia no estan disponibles los resultados."> --%>
+                    <asp:GridView ID="gvPosiciones"  runat="server" CssClass="table table-striped table-hover" AutoGenerateColumns="False" EmptyDataText="No hay registros de datos para mostrar."> 
                         <Columns>
-                            <asp:BoundField DataField="Posicion" HeaderText="Posiciones de Ultima Maraton" ReadOnly="True" SortExpression="Posicion" />
+                            <asp:BoundField DataField="Posicion" HeaderText="Posicion" ReadOnly="True" SortExpression="Posicion" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" ReadOnly="True" SortExpression="Nombre" /> 
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" ReadOnly="True" SortExpression="Apellido" />
+                            <asp:BoundField DataField="Tiempo_Llegada" HeaderText="Tiempo Llegada" ReadOnly="True" SortExpression="Tiempo_Llegada" />
                         </Columns>
                     </asp:GridView>
                 </div>
@@ -73,11 +77,11 @@
                             <div class="form-group">
                                 <label for="inputPassword" class="col-lg-2 control-label">Mi clave</label>
                                 <div class="col-lg-5">
-                                    <asp:TextBox ID="txtClave" class="form-control" placeholder="Clave" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtClave" class="form-control" type="password" placeholder="Clave" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvClave1" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtClave"></asp:RequiredFieldValidator>                           
                                 </div>
                                 <div class="col-lg-5">
-                                    <asp:TextBox ID="txtClaveRepetir" class="form-control" placeholder="Repetir Clave" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtClaveRepetir" class="form-control" type="password" placeholder="Repetir Clave" runat="server"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="rfvClave2" runat="server" ErrorMessage="Campo obligatorio" ControlToValidate="txtClaveRepetir"></asp:RequiredFieldValidator>
                                     <asp:CompareValidator ID="cvClave2" runat="server" ErrorMessage="Contraseña no coincide" ControlToValidate="txtClave" ControlToCompare="txtClaveRepetir"></asp:CompareValidator>
                                 </div>

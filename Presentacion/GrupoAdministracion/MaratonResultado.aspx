@@ -17,7 +17,7 @@
                         <asp:BoundField DataField="Nombre" HeaderText="Participante" />
                         <asp:CheckBoxField DataField="Presente" HeaderText="¿Asistió?" />
                         <asp:CheckBoxField DataField="Abandono" HeaderText="¿Abandonó?" />
-                        <asp:BoundField DataField="Tiempo_Llegada" HeaderText="Tiempo"'></asp:BoundField>
+                        <asp:BoundField DataField="Tiempo_Llegada" HeaderText="Tiempo"></asp:BoundField>
                         <asp:HyperLinkField HeaderText="Editar" DataNavigateUrlFields="ID,MaratonID" DataNavigateUrlFormatString="MaratonResultadoDetalle.aspx?UsuarioId={0}&MaratonID={1}" Text="Editar" ControlStyle-CssClass="btn btn-success" />
                     </Columns>
                 </asp:GridView>

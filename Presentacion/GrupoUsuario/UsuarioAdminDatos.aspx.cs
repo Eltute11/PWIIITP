@@ -17,6 +17,12 @@ namespace Presentacion.GrupoUsuario
                 Usuario usuario = new Usuario(); // Lo obtengo de BaseDeDatos.Modelo.Usuario
                 usuario = (Usuario)Session["Usuario"];
 
+                UsuarioRepositorio repoUsuario = new UsuarioRepositorio();
+                Usuario oUsuario = new Usuario();
+
+                usuario = repoUsuario.Obtener(usuario.Email, usuario.Clave);
+
+
                 if (usuario == null)
                 {
                     HttpContext.Current.Session.Clear();

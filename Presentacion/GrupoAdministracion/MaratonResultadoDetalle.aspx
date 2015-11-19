@@ -45,9 +45,8 @@
                         <div class="form-group">
                             <label for="inputPassword" class="col-lg-4 control-label">Hora de Llegada</label>
                             <div class="col-lg-5">
-                                <asp:TextBox ID="txtTiempoLlegada" class="form-control" placeholder="hh:mm:ss.ms" runat="server"></asp:TextBox>
-                                <asp:RegularExpressionValidator ID="revTiempoLlegada" runat="server" ErrorMessage="Formato invalido (hh:mm:ss.ms)"  ValidationExpression="[0-9][0-9]:[0-5][0-9]:[0-5][0-9].[0-5][0-9]" ControlToValidate="txtTiempoLlegada" Display="Dynamic"></asp:RegularExpressionValidator>
-
+                                <asp:TextBox ID="txtTiempoLlegada" class="form-control" placeholder="hh:mm:ss" runat="server"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="revTiempoLlegada" runat="server" ErrorMessage="Formato invalido (hh:mm:ss)"  ValidationExpression="[0-9][0-9]:[0-5][0-9]:[0-5][0-9]" ControlToValidate="txtTiempoLlegada" Display="Dynamic"></asp:RegularExpressionValidator>
                             </div>
                         </div>
                         <div class="form-group">

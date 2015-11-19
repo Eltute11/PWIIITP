@@ -71,6 +71,7 @@
     <Compile Include="Modelo\Usuario.cs">
       <DependentUpon>MaratonModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="UltimaMaraton.cs" />
     <Compile Include="UsuarioRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
